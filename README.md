@@ -170,7 +170,7 @@ By the end of the 90 Days, you will:
 
 ## **Join the Community**
 Connect with other learners, share progress, and discuss challenges:
-- Discord: [DevOps Learners Community](#)
+- Discord: [DevOps Learners Community](https://discord.com/channels/1296485338226626621/1353353614201978982)
 - LinkedIn: [DevOps Challenge Group](#)
 
 ---
