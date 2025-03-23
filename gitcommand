@@ -1,15 +1,7 @@
     1  apt update
     2  apt install git
-    3  cls
-    4  clear
-    5  git
     6  git -v
     7  clear
-    8  mkdir
-    9  mkdir Git
-   10  ls
-   11  rm Git
-   12  rm -rf Git
    13  mkdir git
    14  cd git
    15  ls
@@ -21,8 +13,7 @@
    21  git init
    22  ls -la
    23  git config user.name "Mohd Shahid"
-   24  git config user.email "shahid199578@gmail.com
-"
+   24  git config user.email "shahid199578@gmail.com"
    25  git status
    26  pwd
    27  touch text1.txt text2.txt
@@ -70,20 +61,6 @@
    69  git checkout master
    70  git clone https://github.com/Shahid199578/newrepo.git
    71  ls -la
-   72  git push origin master
-   73  git pull
-   74  git pull origin master
-   75  git reset hard
-   76  git reset hard head
-   77  git reset
-   78  git pull
-   79  git pull origin master
-   80  git pull origin master --no-rebase
-   81  git push origin master
-   82  ls -la
-   83  cd newrepo/
-   84  clear
-   85  ls
    86  touch text1.txt text2.txt text3.txt
    87  vi text1.txt 
    88  git add .
@@ -109,7 +86,6 @@
   108  git push origin feature1
   109  git checkout master
   110  git push origin master
-  111  git remote 0v
   112  git remote -v
   113  git fetch origin master
   114  git checkout feature2
@@ -131,4 +107,3 @@
   130  git pull origin master
   131  git status
   132  git log
-  133  history
