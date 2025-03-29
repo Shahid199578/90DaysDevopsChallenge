@@ -1,5 +1,3 @@
-**# Day 3: AWS IAM and EC2**
-
 ## **AWS IAM (Identity and Access Management)**
 
 ### **1. Introduction to IAM**
