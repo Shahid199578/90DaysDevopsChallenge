@@ -1,0 +1,109 @@
+    1  apt update
+    2  apt install git
+    6  git -v
+    7  clear
+   13  mkdir git
+   14  cd git
+   15  ls
+   16  vi test.txt
+   17  ls
+   18  ls -la
+   19  ls -ll
+   20  git status
+   21  git init
+   22  ls -la
+   23  git config user.name "Mohd Shahid"
+   24  git config user.email "shahid199578@gmail.com"
+   25  git status
+   26  pwd
+   27  touch text1.txt text2.txt
+   28  ls
+   29  ls -la
+   30  git status
+   31  git add text.txt text1.txt
+   32  git add test.txt text1.txt
+   33  git status
+   34  git commit -m "This is initial commit"
+   35  git staus
+   36  git status
+   37  git log
+   38  git log -oneline
+   39  git log -online
+   40  git log --oneline
+   41  git show 5368284
+   42  ls -la
+   43  git status
+   44  vi text1.txt 
+   45  vi text2.txt 
+   46  git status 
+   47  git add .
+   48  git status
+   49  git commit -m "text2.txt added with new line"
+   50  git log
+   51  git log --oneline
+   52  git show 8650cec
+   53  git remote add origin https://github.com/Shahid199578/newrepo.git
+   54  git remote -v
+   55  git fetch origin master
+   56  ls -la
+   57  git push origin master
+   58  git login 
+   59  git push origin master
+   60  git pull origin master
+   61  git push origin master
+   62  git rebase origin master
+   63  git rebase origin
+   64  git rebase master
+   65  git pull origin
+   66  git pull origin master
+   67  git fetch origin 
+   68  git pull origin master
+   69  git checkout master
+   70  git clone https://github.com/Shahid199578/newrepo.git
+   71  ls -la
+   86  touch text1.txt text2.txt text3.txt
+   87  vi text1.txt 
+   88  git add .
+   89  git commit -m "this is initial commit"
+   90  git remote -v
+   91  git push origin master
+   92  git log
+   93  git log --oneline
+   94  clear
+   95  git branch feature1
+   96  git branch feature2
+   97  git baranch
+   98  git baranches
+   99  git branch
+  100  git checkout feature1
+  101  git branch
+  102  vi fike1.txt
+  103  git status
+  104  git add .
+  105  git status
+  106  git commit -m "this is from feature1"
+  107  git log
+  108  git push origin feature1
+  109  git checkout master
+  110  git push origin master
+  112  git remote -v
+  113  git fetch origin master
+  114  git checkout feature2
+  115  vi feature2.txt
+  116  git add .
+  117  git commit -m "this is from feature2"
+  118  git push origin feature2
+  119  git branch
+  120  git checkout master
+  121  git merge feature1
+  122  git status
+  123  git push origin master
+  124  git merge feature1
+  125  git merge feature2
+  126  git status
+  127  git push origin master
+  128  ls -la
+  129  pwd
+  130  git pull origin master
+  131  git status
+  132  git log
