@@ -1,5 +1,3 @@
-**# Day 4: AWS S3 (Simple Storage Service)**
-
 ## **1. Introduction to S3**
 - AWS S3 provides **scalable object storage**.
 - Stores data in **buckets**.
