@@ -170,6 +170,7 @@ By the end of the 90 Days, you will:
 
 ## **Join the Community**
 Connect with other learners, share progress, and discuss challenges:
+- YouTube: [Start Cloud Ops](https://www.youtube.com/channel/UCXkE7GFMpvF7rM8m-dDNq8Q)
 - Discord: [DevOps Learners Community](https://discord.com/channels/1296485338226626621/1353353614201978982)
 - LinkedIn: [DevOps Challenge Group](#)
 
