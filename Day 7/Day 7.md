@@ -121,7 +121,7 @@ chmod 400 mykey.pem
 
 Find the Public DNS (IPv4) from the instance details and connect:
 
-    **ssh -i "mykey.pem" ec2-user@ec2-52-12-116-90.compute-1.amazonaws.com**
+    ssh -i "mykey.pem" ec2-user@ec2-52-12-116-90.compute-1.amazonaws.com
 
 - Replace mykey.pem with your key file name.
 - Replace the DNS with your instance's public IP.
@@ -159,22 +159,29 @@ Terminating deletes the instance and attached volumes.
 
 
 ### **12. Monitoring and Managing Instances**
+
 View Instance Status
+
 **aws ec2 describe-instances**
+
 Check Instance State
+
 **aws ec2 describe-instance-status --instance-ids i-1234567890abcdef0**
+
 Reboot an Instance
+
 **aws ec2 reboot-instances --instance-ids i-1234567890abcdef0**
+---
 
 ### **13. Troubleshooting EC2 Connectivity Issues**
 ### Common Issues:
-#### - SSH Permission Denied:
+#### SSH Permission Denied:
 - Check the file permission of your .pem file.
 - Verify that the correct key pair is being used.
-#### - Instance Not Reachable:
+#### Instance Not Reachable:
 - Check security group rules for open ports.
 - Verify the network ACLs and VPC settings.
-#### - Web Server Not Responding:
+#### Web Server Not Responding:
 - Ensure that the HTTP or HTTPS port is open.
 - Restart the web server and check logs.
 
