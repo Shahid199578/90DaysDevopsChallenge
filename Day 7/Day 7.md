@@ -98,11 +98,13 @@ Click **Next: Configure Security Group**.
 ### **7. Configuring Security Group**
 1.	Create a New Security Group or Select an Existing One.
 2.	Add the following rules:
+
 | Type	| Protocol	| Port Range	| Source |
 |-------|-----------|---------------|--------|
 | SSH	| TCP | 22 | 0.0.0.0/0 |
 | HTTP	| TCP | 80 | 0.0.0.0/0 |
 | HTTPS | TCP | 443 | 0.0.0.0/0 |
+
 Click **Review and Launch**.
 
 ### **8. Launching the Instance**
