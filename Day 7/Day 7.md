@@ -154,32 +154,33 @@ Stop an Instance
 
 Stopping an instance preserves the data on disk.
 
-**aws ec2 stop-instances --instance-ids i-1234567890abcdef0**
+    aws ec2 stop-instances --instance-ids i-1234567890abcdef0
 
 Start an Instance
 
-**aws ec2 start-instances --instance-ids i-1234567890abcdef0**
+    aws ec2 start-instances --instance-ids i-1234567890abcdef0
 
 Terminate an Instance
 
 Terminating deletes the instance and attached volumes.
 
-**aws ec2 terminate-instances --instance-ids i-1234567890abcdef0**
+    aws ec2 terminate-instances --instance-ids i-1234567890abcdef0
 
 
 ### **12. Monitoring and Managing Instances**
 
 View Instance Status
 
-**aws ec2 describe-instances**
+    aws ec2 describe-instances
 
 Check Instance State
 
-**aws ec2 describe-instance-status --instance-ids i-1234567890abcdef0**
+    aws ec2 describe-instance-status --instance-ids i-1234567890abcdef0
 
 Reboot an Instance
 
-**aws ec2 reboot-instances --instance-ids i-1234567890abcdef0**
+    aws ec2 reboot-instances --instance-ids i-1234567890abcdef0
+    
 ---
 
 ### **13. Troubleshooting EC2 Connectivity Issues**
