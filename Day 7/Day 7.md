@@ -52,6 +52,7 @@ AWS EC2 instances are classified into various families based on their use case a
 2. Navigate to the **EC2 Dashboard** by:
    - Selecting **EC2** from the **Services** menu, or
    - Searching for "EC2" in the top search bar.
+
 **Step 2: Launch an Instance**
 1.	Click Launch Instance.
 2.	Enter an instance name (e.g., "MyWebServer").
