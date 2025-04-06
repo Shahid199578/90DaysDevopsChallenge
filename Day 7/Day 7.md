@@ -64,12 +64,12 @@ AWS EC2 instances are classified into various families based on their use case a
     - Compute Optimized: c5.large
 5.	Click Next: Configure Instance Details.
 
-### **4. Configuring Instance Details**
-    - Network: Choose the VPC and Subnet.
-    - Auto-Assign Public IP: Enable it for direct access.
-    - IAM Role: Attach a role if needed.
-    - Shutdown Behavior: Choose between Stop or Terminate.
-    - User Data (Optional): Add bootstrap scripts.
+**4. Configuring Instance Details**
+- Network: Choose the VPC and Subnet.
+- Auto-Assign Public IP: Enable it for direct access.
+- IAM Role: Attach a role if needed.
+- Shutdown Behavior: Choose between Stop or Terminate.
+- User Data (Optional): Add bootstrap scripts.
 **Example User Data Script (for ubuntu):**
     #!/bin/bash
     apt update -y
@@ -80,60 +80,83 @@ AWS EC2 instances are classified into various families based on their use case a
 Click **Next: Add Storage**.
 
 ### **5. Adding Storage**
-    1.	Specify the root volume size (e.g., 20 GB).
-    2.	Choose the volume type:
-        - General Purpose SSD (gp3, gp2): Cost-effective and suitable for general workloads.
-        - Provisioned IOPS SSD (io2, io1): High performance for mission-critical applications.
-        - Throughput Optimized HDD (st1): Low-cost HDD for frequently accessed workloads.
-        - Cold HDD (sc1): Lowest cost, suitable for less frequently accessed data.
-    3.	Click Next: Add Tags.
+1.	Specify the root volume size (e.g., 20 GB).
+2.	Choose the volume type:
+- General Purpose SSD (gp3, gp2): Cost-effective and suitable for general workloads.
+- Provisioned IOPS SSD (io2, io1): High performance for mission-critical applications.
+- Throughput Optimized HDD (st1): Low-cost HDD for frequently accessed workloads.
+- Cold HDD (sc1): Lowest cost, suitable for less frequently accessed data.
+3.	Click Next: Add Tags.
 
 ### **6. Adding Tags**
 Add tags to identify your instance. For example:
-    - Key: Name
-    - Value: MyWebServer
+
+- Key: Name
+- Value: MyWebServer
 Click **Next: Configure Security Group**.
 
 ### **7. Configuring Security Group**
-    1.	Create a New Security Group or Select an Existing One.
-    2.	Add the following rules:
-    | Type	| Protocol	| Port Range	| Source |
-    |-------|-----------|---------------|--------|
-    | SSH	| TCP | 22 | 0.0.0.0/0 |
-    | HTTP	| TCP | 80 | 0.0.0.0/0 |
-    | HTTPS | TCP | 443 | 0.0.0.0/0 |
+1.	Create a New Security Group or Select an Existing One.
+2.	Add the following rules:
+| Type	| Protocol	| Port Range	| Source |
+|-------|-----------|---------------|--------|
+| SSH	| TCP | 22 | 0.0.0.0/0 |
+| HTTP	| TCP | 80 | 0.0.0.0/0 |
+| HTTPS | TCP | 443 | 0.0.0.0/0 |
 Click **Review and Launch**.
 
 ### **8. Launching the Instance**
-    1.	Click Launch.
-    2.	Choose an existing key pair or create a new one.
-    3.	Download the key pair (.pem file) and keep it secure.
-    4.	Click Launch Instances.
+1.	Click Launch.
+2.	Choose an existing key pair or create a new one.
+3.	Download the key pair (.pem file) and keep it secure.
+4.	Click Launch Instances.
+---
 
 ### **9. Accessing EC2 via SSH**
-Step 1: Set Permissions for the Key Pair
+**Step 1: Set Permissions for the Key Pair**
+
 chmod 400 mykey.pem
-Step 2: Connect to Your Instance
+
+**Step 2: Connect to Your Instance**
+
 Find the Public DNS (IPv4) from the instance details and connect:
-ssh -i "mykey.pem" ec2-user@ec2-52-12-116-90.compute-1.amazonaws.com
-    - Replace mykey.pem with your key file name.
-    - Replace the DNS with your instance's public IP.
+
+    **ssh -i "mykey.pem" ec2-user@ec2-52-12-116-90.compute-1.amazonaws.com**
+
+- Replace mykey.pem with your key file name.
+- Replace the DNS with your instance's public IP.
+---
 ### **10. Verifying and Managing Your Instance**
 Check Running Services
+
 **sudo systemctl status apache2**
+
 Update the Instance
+
 **sudo apt update -y**
+
 Restarting the Web Server
+
 **sudo systemctl restart apache2**
+
 ### **11. Stopping and Terminating Instances**
+
 Stop an Instance
+
 Stopping an instance preserves the data on disk.
+
 **aws ec2 stop-instances --instance-ids i-1234567890abcdef0**
+
 Start an Instance
+
 **aws ec2 start-instances --instance-ids i-1234567890abcdef0**
+
 Terminate an Instance
+
 Terminating deletes the instance and attached volumes.
+
 **aws ec2 terminate-instances --instance-ids i-1234567890abcdef0**
+
 
 ### **12. Monitoring and Managing Instances**
 View Instance Status
@@ -146,14 +169,14 @@ Reboot an Instance
 ### **13. Troubleshooting EC2 Connectivity Issues**
 ### Common Issues:
 #### - SSH Permission Denied:
-    - Check the file permission of your .pem file.
-    - Verify that the correct key pair is being used.
+- Check the file permission of your .pem file.
+- Verify that the correct key pair is being used.
 #### - Instance Not Reachable:
-    - Check security group rules for open ports.
-    - Verify the network ACLs and VPC settings.
+- Check security group rules for open ports.
+- Verify the network ACLs and VPC settings.
 #### - Web Server Not Responding:
-    - Ensure that the HTTP or HTTPS port is open.
-    - Restart the web server and check logs.
+- Ensure that the HTTP or HTTPS port is open.
+- Restart the web server and check logs.
 
 ### **14. Best Practices for EC2**
 - Use IAM Roles: Avoid hardcoding credentials.
