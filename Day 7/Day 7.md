@@ -82,17 +82,20 @@ Click **Next: Add Storage**.
 ### **5. Adding Storage**
 1.	Specify the root volume size (e.g., 20 GB).
 2.	Choose the volume type:
-- General Purpose SSD (gp3, gp2): Cost-effective and suitable for general workloads.
+-- General Purpose SSD (gp3, gp2): Cost-effective and suitable for general workloads.
 - Provisioned IOPS SSD (io2, io1): High performance for mission-critical applications.
 - Throughput Optimized HDD (st1): Low-cost HDD for frequently accessed workloads.
 - Cold HDD (sc1): Lowest cost, suitable for less frequently accessed data.
 3.	Click Next: Add Tags.
 
 ### **6. Adding Tags**
-Add tags to identify your instance. For example:
+Add tags to identify your instance. 
+
+For example:
 
 - Key: Name
 - Value: MyWebServer
+
 Click **Next: Configure Security Group**.
 
 ### **7. Configuring Security Group**
