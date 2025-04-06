@@ -71,13 +71,16 @@ AWS EC2 instances are classified into various families based on their use case a
 - IAM Role: Attach a role if needed.
 - Shutdown Behavior: Choose between Stop or Terminate.
 - User Data (Optional): Add bootstrap scripts.
+
 **Example User Data Script (for ubuntu):**
+
     #!/bin/bash
     apt update -y
     apt install apache2 -y
     systemctl start apache2
     systemctl enable apache2
     echo "Welcome to My Web Server" > /var/www/html/index.html
+
 Click **Next: Add Storage**.
 
 ### **5. Adding Storage**
@@ -135,15 +138,15 @@ Find the Public DNS (IPv4) from the instance details and connect:
 ### **10. Verifying and Managing Your Instance**
 Check Running Services
 
-**sudo systemctl status apache2**
+    sudo systemctl status apache2
 
 Update the Instance
 
-**sudo apt update -y**
+    sudo apt update -y
 
 Restarting the Web Server
 
-**sudo systemctl restart apache2**
+    sudo systemctl restart apache2
 
 ### **11. Stopping and Terminating Instances**
 
