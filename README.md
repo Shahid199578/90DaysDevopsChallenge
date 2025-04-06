@@ -40,12 +40,12 @@ The challenge is divided into **90 days**, with each day dedicated to learning a
 - **Day 4**: IAM Basics – Users, Roles, Policies
 - **Day 5**: Version Control with Git and GitHub
 - **Day 6**: Linux Basics and Shell Commands
-- **Day 7**: Introduction to Shell Scripting
-- **Day 8**: Deeper into Linux (Permissions, Processes, Services)
-- **Day 9**: AWS EC2: Launching, Configuring, and SSH Access
-- **Day 10**: Managing EC2 Instances and Auto Scaling
-- **Day 11**: EBS and S3 – Storage Concepts and Usage
-- **Day 12**: Snapshots, AMIs, and Backup Strategies
+- **Day 7**: AWS EC2: Launching, Configuring, and SSH Access
+- **Day 8**: Managing EC2 Instances and Auto Scaling
+- **Day 9**: EBS and S3 – Storage Concepts and Usage 
+- **Day 10**: Snapshots, AMIs, and Backup Strategies
+- **Day 11**: Introduction to Shell Scripting
+- **Day 12**: Deeper into Linux (Permissions, Processes, Services)
 - **Day 13**: VPC Deep Dive – Subnets, Route Tables, Gateways
 - **Day 14**: Security Groups, NACLs, and VPC Peering
 - **Day 15**: NAT Gateway, Internet Gateway, and Bastion Host
