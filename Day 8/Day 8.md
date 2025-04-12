@@ -1,4 +1,3 @@
-```
 # 🚀 Day 8: Managing EC2 Instances and Auto Scaling
 
 Managing EC2 instances and utilizing Auto Scaling are fundamental practices in AWS to ensure **high availability**, **fault tolerance**, and **cost optimization**. This guide covers EC2 management via GUI and CLI, Auto Scaling types and strategies, real-world use cases, and best practices.
@@ -302,5 +301,3 @@ aws ec2 describe-instances \
 - Use pagination wisely for large outputs.
 
 ---
-
-```
