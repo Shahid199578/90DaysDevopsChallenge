@@ -4,9 +4,9 @@ Managing EC2 instances and utilizing Auto Scaling are fundamental practices in A
 ![Autoscalling](Day8_autoscalling.png)
 
 
-[![](https://img.youtube.com/vi/Wj0-Vkx0AKk/0.jpg)](https://www.youtube.com/watch?v=Wj0-Vkx0AKk)
+               [![](https://img.youtube.com/vi/Wj0-Vkx0AKk/0.jpg)](https://www.youtube.com/watch?v=Wj0-Vkx0AKk)
 
-See also [Watch the video](https://www.youtube.com/watch?v=Wj0-Vkx0AKk)
+               [Watch the video](https://www.youtube.com/watch?v=Wj0-Vkx0AKk)
 ---
 
 ## 🔍 Why Managing EC2 Instances is Important
