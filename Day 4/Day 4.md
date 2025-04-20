@@ -4,6 +4,12 @@
 - AWS Identity and Access Management (IAM) allows you to manage access to AWS services and resources securely.
 - You can use IAM to create and manage AWS users and groups and assign permissions to allow or deny their access to AWS resources.
 
+
+[![](https://img.youtube.com/vi/E0hm3tkNqAg/0.jpg)](https://www.youtube.com/watch?v=E0hm3tkNqAg)
+
+[Watch the video](https://www.youtube.com/watch?v=E0hm3tkNqAg)
+
+
 ### Why is IAM Important?
 1. **Security**: Control who can access your resources.
 2. **Granular Permissions**: Assign specific permissions to users or groups.

@@ -7,6 +7,11 @@ AWS Free Tier offers free access to AWS services for 12 months, allowing you to 
 - **Database Services**: RDS, DynamoDB.
 - **Monitoring Services**: CloudWatch.
 
+
+[![](https://img.youtube.com/vi/E0hm3tkNqAg/0.jpg)](https://www.youtube.com/watch?v=E0hm3tkNqAg)
+
+[Watch the video](https://www.youtube.com/watch?v=E0hm3tkNqAg)
+
 ### Why Use AWS CLI?
 The AWS Command Line Interface (CLI) allows you to interact with AWS services directly from your terminal or command prompt. It offers:
 - Efficient automation through scripts.

@@ -13,6 +13,14 @@
 ✅ Best practices  
 ✅ Hands-on Labs  
 
+
+
+
+[![](https://img.youtube.com/vi/UkA6m3cnXhQ/0.jpg)](https://www.youtube.com/watch?UkA6m3cnXhQ)
+
+[Watch the video](https://www.youtube.com/watch?UkA6m3cnXhQ)
+
+
 ---
 
 ## Amazon Elastic Block Store (EBS)

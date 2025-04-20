@@ -1,5 +1,10 @@
 # AWS VPC Deep Dive: Subnets, Route Tables, Gateways
 
+
+[![](https://img.youtube.com/vi/0EdHPdzv2ko/0.jpg)](https://www.youtube.com/watch?v=0EdHPdzv2ko)
+
+[Watch the video](https://www.youtube.com/watch?v=0EdHPdzv2ko)
+
 ## 🌐 What is a VPC?
 A **Virtual Private Cloud (VPC)** is an isolated network within AWS where you can launch AWS resources. It's like having your own private network in the cloud, with full control over:
 - IP addressing (CIDR block)

@@ -1,6 +1,11 @@
 ## 1. What is Linux?
 Linux is a Unix-like operating system kernel initially developed by Linus Torvalds in 1991. It is widely used in servers, embedded systems, and desktop environments. Linux is known for its stability, security, and flexibility.
 
+
+[![](https://img.youtube.com/vi/ZR7D9k8dBC8/0.jpg)](https://www.youtube.com/watch?v=ZR7D9k8dBC8)
+
+[Watch the video](https://www.youtube.com/watch?v=ZR7D9k8dBC8)
+
 ### Key Features of Linux:
 1. **Open Source**: Free to use, modify, and distribute.
 2. **Multiuser**: Supports multiple users at the same time.

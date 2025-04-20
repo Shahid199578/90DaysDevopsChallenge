@@ -8,6 +8,10 @@
 - Keeps track of every modification to a project.
 - Helps manage collaboration and maintain project history.
 
+[![](https://img.youtube.com/vi/cYtF3s-Bk6E/0.jpg)](https://www.youtube.com/watch?v=cYtF3s-Bk6E)
+
+[Watch the video](https://www.youtube.com/watch?v=cYtF3s-Bk6E)
+
 ### Why Use Version Control?
 1. **Collaboration:** Multiple developers can work on the same project without conflicts.
 2. **Version Tracking:** Keeps a detailed history of changes.

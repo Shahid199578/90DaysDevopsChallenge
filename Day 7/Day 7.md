@@ -7,6 +7,13 @@ Key Features of AWS EC2:
 - **Customizability**: Fully customizable instances with different operating systems and software.
 - **Cost-Efficiency**: Pay-as-you-go pricing model.
 ---
+
+[![](https://img.youtube.com/vi/eVYer7367NU/0.jpg)](https://www.youtube.com/watch?v=eVYer7367NU)
+
+[Watch the video](https://www.youtube.com/watch?v=eVYer7367NU)
+
+
+---
 ## **2. Types of EC2 Instances**
 AWS EC2 instances are classified into various families based on their use case and workload characteristics:
 **A. General Purpose**
