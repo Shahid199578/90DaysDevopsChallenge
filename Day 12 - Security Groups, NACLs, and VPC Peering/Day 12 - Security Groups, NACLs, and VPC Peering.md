@@ -1,83 +1,177 @@
-﻿
-# Day 12: Security Groups, NACLs, and VPC Peering
-
-## 🔐 Security Groups (SGs)
-
-Security Groups act as virtual firewalls for your EC2 instances to control inbound and outbound traffic.
-
-### Key Concepts:
-- **Stateful:** Responses to allowed inbound traffic are automatically allowed.
-- **Instance-level firewall:** Applied directly to EC2 instances.
-- **Rules:** Based on protocols, ports, and CIDR IP ranges.
-
-### Practical Example:
-```bash
-# Allow inbound SSH from a specific IP
-aws ec2 authorize-security-group-ingress   --group-id sg-0123456789abcdef0   --protocol tcp --port 22   --cidr 203.0.113.0/24
-```
+﻿# AWS Day 12: Security Groups, NACLs, and VPC Peering
 
 ---
 
-## 🌐 Network Access Control Lists (NACLs)
+## 🔐 1. Security Groups (SGs)
 
-NACLs are stateless firewalls for controlling traffic at the subnet level.
+### ✅ What is a Security Group?
+A virtual firewall that controls **inbound and outbound** traffic for **EC2 instances** and **Elastic Network Interfaces (ENIs)** at the **instance level**.
 
-### Key Concepts:
-- **Stateless:** Rules apply in both directions independently.
-- **Subnet-level firewall:** Controls traffic entering/leaving subnets.
-- **Rules:** Numbered, evaluated in order, explicit deny rule support.
+### 🔑 Key Features:
+- **Stateful:** If you allow inbound traffic, the response traffic is automatically allowed.
+- **Attached to resources**, not subnets.
+- **Multiple rules supported** for different types of traffic.
+- **Default behavior:** All traffic is denied until explicitly allowed.
 
-### Practical Example:
-- Block access from a specific IP at subnet level.
-- Allow only HTTP/HTTPS traffic in a public subnet.
+### 📌 When to Use:
+- For **fine-grained control** over access to individual instances.
+- **Example:** Allow SSH (port 22) from your IP only.
 
----
+### 🧱 Example Rules:
+| Type     | Protocol | Port Range | Source        |
+|----------|----------|-------------|----------------|
+| Inbound  | TCP      | 22          | My IP          |
+| Inbound  | TCP      | 80          | 0.0.0.0/0      |
+| Outbound | All      | All         | 0.0.0.0/0      |
 
-## 🔗 VPC Peering
-
-VPC Peering allows private connectivity between two VPCs using AWS's backbone.
-
-### Key Concepts:
-- **One-to-one relationship:** No transitive routing.
-- **Non-overlapping CIDRs:** Required.
-- **Route Tables:** Must be updated manually.
-- **Security Groups and NACLs:** Must allow traffic.
-
-### Lifecycle:
-1. **Initiating-request:** Request created.
-2. **Pending-acceptance:** Awaiting peer acceptance.
-3. **Provisioning:** Being established.
-4. **Active:** Connection is live.
-5. **Expired/Rejected/Failed:** Connection failed or not accepted.
-
-### Limitations:
-- No transitive peering (A–B, A–C ≠ B–C)
-- Cannot share gateways, NATs, or VPNs across peered VPCs
-- Manual route table updates needed for communication
-
-### Example Route Table Update for VPC A:
-| Destination CIDR | Target        |
-|------------------|---------------|
-| 10.0.0.0/16      | local         |
-| 10.1.0.0/16      | peering-A-B   |
-| 10.2.0.0/16      | peering-A-C   |
+### 📌 Common Use Cases:
+- Allow HTTP/HTTPS for web servers
+- Allow SSH only from office IP
+- Block all else by default
 
 ---
 
-## 📏 Peering Quotas
+## 🚧 2. Network Access Control Lists (NACLs)
 
-| Name                                          | Default    | Adjustable |
-|-----------------------------------------------|------------|------------|
-| Active connections per VPC                    | 50         | Yes (125)  |
-| Outstanding peering connection requests       | 25         | Yes        |
-| Expiry time for unaccepted requests           | 1 week     | No         |
+### ✅ What is a NACL?
+A **subnet-level firewall** that controls **inbound and outbound traffic** for all resources within a subnet.
+
+### 🔑 Key Features:
+- **Stateless:** Must define both **inbound and outbound rules**.
+- **Rules evaluated in number order** (lower rule number = higher priority).
+- **Supports Allow and Deny rules.**
+- Applied to **entire subnets**.
+
+### 📌 When to Use:
+- Add **extra layer of security**.
+- Block **known malicious IP ranges**.
+
+### 🧱 Example Rules:
+| Rule # | Type  | Protocol | Port | Source          | Allow/Deny |
+|--------|-------|----------|------|------------------|-------------|
+| 100    | HTTP  | TCP      | 80   | 0.0.0.0/0        | ALLOW       |
+| 110    | SSH   | TCP      | 22   | 203.0.113.0/24   | ALLOW       |
+| *      | All   | All      | All  | 0.0.0.0/0        | DENY        |
+
+### 🆚 SG vs NACL
+| Feature            | Security Group       | NACL                  |
+|--------------------|-----------------------|------------------------|
+| Level              | Instance-level        | Subnet-level           |
+| Stateful           | ✅ Yes                | ❌ No                  |
+| Rules              | Only Allow            | Allow + Deny           |
+| Evaluation Order   | All at once           | Rule order (low → high) |
+| Use Case           | App/resource access   | Subnet-level control   |
 
 ---
 
-## 🧠 Real-World Use Case
+## 🔄 3. VPC Peering
 
-You have a dev VPC and a prod VPC. VPC Peering helps connect both for private service discovery between environments. Ensure:
-- Non-overlapping CIDRs
-- Proper route tables and SG rules
-- Direct peering (no transitive routes)
+### 🌐 What is it?
+A networking connection between **two VPCs** that enables **private communication** via AWS’s internal network.
+
+### ✅ Key Points:
+- Works **within the same AWS account** or **across accounts**.
+- **No overlapping CIDR blocks.**
+- **No transitive peering**.
+- Requires **route table updates**.
+
+### 📌 Use Cases:
+- Connect microservices in different VPCs
+- Separate environments (dev/test/prod)
+- Cross-account/region connectivity
+
+### 🧱 Steps to Setup:
+1. Create VPC-A (`10.0.0.0/16`) and VPC-B (`192.168.0.0/16`)
+2. Request a **peering connection** from VPC-A to VPC-B
+3. Accept the request in VPC-B
+4. Update route tables:
+   - VPC-A → add route to `192.168.0.0/16` → peering ID
+   - VPC-B → add route to `10.0.0.0/16` → peering ID
+5. Update **SGs and NACLs** to allow traffic
+
+### 🔁 VPC Peering Lifecycle
+| State               | Description                                           | Action/Visibility                            |
+|---------------------|-------------------------------------------------------|-----------------------------------------------|
+| Initiating-request  | Request created                                       | Visible to requester                          |
+| Failed              | Request failed due to overlap/permissions            | Visible for 2 hours                           |
+| Pending-acceptance  | Awaiting approval                                     | Expires in 7 days                             |
+| Expired             | No action taken                                       | Visible for 2 days                            |
+| Rejected            | Accepter rejected                                     | 2 days (requester), 2 hours (accepter)        |
+| Provisioning        | AWS is configuring                                    | Temporary state                               |
+| Active              | Connection is ready                                   | Can be deleted, not rejected                  |
+
+### 🧮 VPC Peering Quotas
+| Name                                         | Default | Adjustable |
+|----------------------------------------------|---------|-------------|
+| Active VPC peering connections per VPC       | 50      | ✅ Yes       |
+| Outstanding peering requests per VPC         | 25      | ✅ Yes       |
+| Expiry for unaccepted peering request        | 7 days  | ❌ No        |
+
+---
+
+## 🧪 Hands-On Lab: Configure SG, NACL, and VPC Peering
+
+### 🛠️ Prerequisites:
+- Two VPCs: `devops-vpc-a` and `devops-vpc-b`
+
+### ✅ Part 1: Create Security Group
+1. Name: `web-sg`
+2. Inbound:
+   - HTTP (80) from `0.0.0.0/0`
+   - SSH (22) from your IP
+3. Outbound: All traffic allowed
+4. Attach to EC2 instance in a public subnet
+
+### ✅ Part 2: Create Network ACL
+1. Go to **VPC > Network ACLs**
+2. Create or select a NACL
+3. Inbound Rules:
+   - Allow TCP 22 and 80
+4. Outbound Rules:
+   - Allow all
+5. Associate with the EC2’s subnet
+
+### ✅ Part 3: VPC Peering
+1. Go to **VPC Dashboard > Peering Connections**
+2. Create request from `devops-vpc-a` to `devops-vpc-b`
+3. Accept the request in `devops-vpc-b`
+4. Update route tables in both VPCs
+5. Verify connectivity (use ICMP or SSH)
+
+---
+
+## 💡 Real-World Use Cases
+
+### Security Groups:
+- Allow only app tier to access databases
+- Restrict public access to internal services
+
+### NACLs:
+- Block malicious IPs at subnet level
+- Prevent internal lateral movement during attacks
+
+### VPC Peering:
+- Enable shared logging/monitoring VPC
+- Isolate environments but allow communication
+
+---
+
+## 🔒 Tips & Best Practices
+- SGs are **your first line of defense**
+- Use NACLs for **additional subnet-level protection**
+- Document peering connections and rules
+- Apply **consistent naming conventions**
+  - e.g., `dev-app-sg`, `qa-db-nacl`
+- Regularly audit and optimize rules
+
+---
+
+## 📌 Summary Comparison Table
+
+| Feature        | Security Groups        | NACLs                  | VPC Peering             |
+|----------------|-------------------------|--------------------------|--------------------------|
+| Level          | Instance                | Subnet                   | VPC                      |
+| Type           | Stateful                | Stateless                | Private connectivity     |
+| Rules          | Allow only              | Allow + Deny             | Needs route updates      |
+| Scope          | ENIs (instance level)   | Subnets                  | Entire VPCs              |
 
