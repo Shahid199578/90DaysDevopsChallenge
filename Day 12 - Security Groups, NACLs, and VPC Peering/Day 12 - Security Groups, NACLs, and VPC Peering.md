@@ -7,6 +7,11 @@
 ### ✅ What is a Security Group?
 A virtual firewall that controls **inbound and outbound** traffic for **EC2 instances** and **Elastic Network Interfaces (ENIs)** at the **instance level**.
 
+
+[![](https://img.youtube.com/vi/5I0Gz-H0pzI/0.jpg)](https://www.youtube.com/watch?v=5I0Gz-H0pzI)
+
+[Watch the video](https://www.youtube.com/watch?v=5I0Gz-H0pzI)
+
 ### 🔑 Key Features:
 - **Stateful:** If you allow inbound traffic, the response traffic is automatically allowed.
 - **Attached to resources**, not subnets.
