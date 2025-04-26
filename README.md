@@ -44,11 +44,11 @@ The challenge is divided into **90 days**, with each day dedicated to learning a
 - **Day 8**: Managing EC2 Instances and Auto Scaling
 - **Day 9**: EBS and S3 – Storage Concepts and Usage 
 - **Day 10**: Snapshots, AMIs, and Backup Strategies
-- **Day 11**: Introduction to Shell Scripting
-- **Day 12**: Deeper into Linux (Permissions, Processes, Services)
-- **Day 13**: VPC Deep Dive – Subnets, Route Tables, Gateways
-- **Day 14**: Security Groups, NACLs, and VPC Peering
-- **Day 15**: NAT Gateway, Internet Gateway, and Bastion Host
+- **Day 11**: VPC Deep Dive – Subnets, Route Tables, Gateways
+- **Day 12**: Security Groups, NACLs, and VPC Peering 
+- **Day 13**: NAT Gateway, Internet Gateway, and Bastion 
+- **Day 14**: Deeper into Linux (Permissions, Processes, Services)
+- **Day 15**: HostIntroduction to Shell Scripting
 
 ## Phase 2: Observability and Containers (Days 16–30)
 - **Day 16**: Introduction to AWS CloudWatch
@@ -172,6 +172,7 @@ Connect with other learners, share progress, and discuss challenges:
 - LinkedIn: [Start Cloud Ops](https://www.linkedin.com/groups/14632188/)
 - YouTube: [Start Cloud Ops](https://www.youtube.com/channel/UCXkE7GFMpvF7rM8m-dDNq8Q)
 - Telegram: [Devops Help](https://t.me/devopshelp199578)
+- Youtube Playlist: [90 days devops Challenge](https://www.youtube.com/playlist?list=PL9O_8r5XT_x_VPZhniLp8u57GKQ6oiEab)
 ---
 
 ## **License**
