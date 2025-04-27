@@ -1,142 +1,182 @@
-﻿# Day 13: NAT Gateway, Internet Gateway, and Bastion Host
+﻿# AWS Day 12: Security Groups, NACLs, and VPC Peering
 
 ---
 
-## 1. Internet Gateway (IGW)
+## 🔐 1. Security Groups (SGs)
 
-### What is an Internet Gateway?
-- A **horizontally scaled**, **redundant**, and **highly available** AWS service that enables communication between instances in your VPC and the **internet**.
-- It supports both **IPv4** and **IPv6** traffic.
+### ✅ What is a Security Group?
+A virtual firewall that controls **inbound and outbound** traffic for **EC2 instances** and **Elastic Network Interfaces (ENIs)** at the **instance level**.
 
-### Why do we need an Internet Gateway?
-- To allow resources in a **public subnet** to:
-  - Initiate **outbound** connections to the internet.
-  - Receive **inbound** connections (for example, users accessing a web server).
 
-### How it works:
-- Attach an Internet Gateway to your **VPC**.
-- Modify the **route table** associated with your **public subnet** to include a route to the Internet Gateway for **0.0.0.0/0** (all IPv4 traffic) or **::/0** (all IPv6 traffic).
-- Instances must have a **Public IP** or an **Elastic IP** assigned to be reachable from the internet.
+[![](https://img.youtube.com/vi/5I0Gz-H0pzI/0.jpg)](https://www.youtube.com/watch?v=5I0Gz-H0pzI)
 
----
+[Watch the video](https://www.youtube.com/watch?v=5I0Gz-H0pzI)
 
-## 2. NAT Gateway
+### 🔑 Key Features:
+- **Stateful:** If you allow inbound traffic, the response traffic is automatically allowed.
+- **Attached to resources**, not subnets.
+- **Multiple rules supported** for different types of traffic.
+- **Default behavior:** All traffic is denied until explicitly allowed.
 
-### What is a NAT Gateway?
-- A **Network Address Translation** (NAT) service that allows **instances in private subnets** to **connect to the internet**, while **preventing the internet from initiating connections back** to them.
+### 📌 When to Use:
+- For **fine-grained control** over access to individual instances.
+- **Example:** Allow SSH (port 22) from your IP only.
 
-### Why do we need a NAT Gateway if we have an Internet Gateway?
-| Scenario | Behavior |
-|:---|:---|
-| Instance in a **public subnet** with a public IP | Connects directly to the internet via Internet Gateway. |
-| Instance in a **private subnet** without a public IP | Cannot connect to the internet directly even though the VPC has an IGW. Needs NAT Gateway for outbound traffic. |
+### 🧱 Example Rules:
+| Type     | Protocol | Port Range | Source        |
+|----------|----------|-------------|----------------|
+| Inbound  | TCP      | 22          | My IP          |
+| Inbound  | TCP      | 80          | 0.0.0.0/0      |
+| Outbound | All      | All         | 0.0.0.0/0      |
 
-**Summary:**  
-- Private instances (no public IP) → NAT Gateway → Internet Gateway → Internet
-
-### Types of NAT Gateways
-| Type | Description |
-|:---|:---|
-| Public NAT Gateway | Deployed in a public subnet. It uses an Elastic IP. |
-| Private NAT Gateway | Deployed in a private subnet. Does not need an Elastic IP. Used for internal VPC-to-VPC communication without traversing the internet. |
+### 📌 Common Use Cases:
+- Allow HTTP/HTTPS for web servers
+- Allow SSH only from office IP
+- Block all else by default
 
 ---
 
-### Key Points about NAT Gateway:
-- **Outbound connections only** from private instances.
-- **Cannot receive inbound** internet traffic.
-- **Requires** an **Elastic IP address** (for Public NAT Gateway).
-- **Automatically scales** to accommodate your traffic.
-- **More secure** than assigning public IPs to private instances.
+## 🚧 2. Network Access Control Lists (NACLs)
+
+### ✅ What is a NACL?
+A **subnet-level firewall** that controls **inbound and outbound traffic** for all resources within a subnet.
+
+### 🔑 Key Features:
+- **Stateless:** Must define both **inbound and outbound rules**.
+- **Rules evaluated in number order** (lower rule number = higher priority).
+- **Supports Allow and Deny rules.**
+- Applied to **entire subnets**.
+
+### 📌 When to Use:
+- Add **extra layer of security**.
+- Block **known malicious IP ranges**.
+
+### 🧱 Example Rules:
+| Rule # | Type  | Protocol | Port | Source          | Allow/Deny |
+|--------|-------|----------|------|------------------|-------------|
+| 100    | HTTP  | TCP      | 80   | 0.0.0.0/0        | ALLOW       |
+| 110    | SSH   | TCP      | 22   | 203.0.113.0/24   | ALLOW       |
+| *      | All   | All      | All  | 0.0.0.0/0        | DENY        |
+
+### 🆚 SG vs NACL
+| Feature            | Security Group       | NACL                  |
+|--------------------|-----------------------|------------------------|
+| Level              | Instance-level        | Subnet-level           |
+| Stateful           | ✅ Yes                | ❌ No                  |
+| Rules              | Only Allow            | Allow + Deny           |
+| Evaluation Order   | All at once           | Rule order (low → high) |
+| Use Case           | App/resource access   | Subnet-level control   |
 
 ---
 
-### NAT Gateway Related Quotas
-| Quota | Default |
-|:---|:---|
-| Max number of EIPs (Elastic IPs) per account | Limited; must be available to create NAT Gateway |
-| Private NAT Gateway: Max number of private IPv4 addresses | 8 |
-| Public NAT Gateway: Max number of Elastic IPs attached | 2 (can request increase) |
+## 🔄 3. VPC Peering
+
+### 🌐 What is it?
+A networking connection between **two VPCs** that enables **private communication** via AWS’s internal network.
+
+### ✅ Key Points:
+- Works **within the same AWS account** or **across accounts**.
+- **No overlapping CIDR blocks.**
+- **No transitive peering**.
+- Requires **route table updates**.
+
+### 📌 Use Cases:
+- Connect microservices in different VPCs
+- Separate environments (dev/test/prod)
+- Cross-account/region connectivity
+
+### 🧱 Steps to Setup:
+1. Create VPC-A (`10.0.0.0/16`) and VPC-B (`192.168.0.0/16`)
+2. Request a **peering connection** from VPC-A to VPC-B
+3. Accept the request in VPC-B
+4. Update route tables:
+   - VPC-A → add route to `192.168.0.0/16` → peering ID
+   - VPC-B → add route to `10.0.0.0/16` → peering ID
+5. Update **SGs and NACLs** to allow traffic
+
+### 🔁 VPC Peering Lifecycle
+| State               | Description                                           | Action/Visibility                            |
+|---------------------|-------------------------------------------------------|-----------------------------------------------|
+| Initiating-request  | Request created                                       | Visible to requester                          |
+| Failed              | Request failed due to overlap/permissions            | Visible for 2 hours                           |
+| Pending-acceptance  | Awaiting approval                                     | Expires in 7 days                             |
+| Expired             | No action taken                                       | Visible for 2 days                            |
+| Rejected            | Accepter rejected                                     | 2 days (requester), 2 hours (accepter)        |
+| Provisioning        | AWS is configuring                                    | Temporary state                               |
+| Active              | Connection is ready                                   | Can be deleted, not rejected                  |
+
+### 🧮 VPC Peering Quotas
+| Name                                         | Default | Adjustable |
+|----------------------------------------------|---------|-------------|
+| Active VPC peering connections per VPC       | 50      | ✅ Yes       |
+| Outstanding peering requests per VPC         | 25      | ✅ Yes       |
+| Expiry for unaccepted peering request        | 7 days  | ❌ No        |
 
 ---
 
-## 3. Bastion Host (Jump Box)
+## 🧪 Hands-On Lab: Configure SG, NACL, and VPC Peering
 
-### What is a Bastion Host?
-- A **special-purpose instance** that acts as a **gateway** for accessing instances inside a **private subnet**.
-- **Deployed in a public subnet** with a **public IP**.
+### 🛠️ Prerequisites:
+- Two VPCs: `devops-vpc-a` and `devops-vpc-b`
 
-### Why do we need a Bastion Host?
-- Private instances **cannot be accessed directly from the internet**.
-- The Bastion Host acts as a **controlled entry point** to the private environment via **SSH (Linux)** or **RDP (Windows)**.
+### ✅ Part 1: Create Security Group
+1. Name: `web-sg`
+2. Inbound:
+   - HTTP (80) from `0.0.0.0/0`
+   - SSH (22) from your IP
+3. Outbound: All traffic allowed
+4. Attach to EC2 instance in a public subnet
 
----
+### ✅ Part 2: Create Network ACL
+1. Go to **VPC > Network ACLs**
+2. Create or select a NACL
+3. Inbound Rules:
+   - Allow TCP 22 and 80
+4. Outbound Rules:
+   - Allow all
+5. Associate with the EC2’s subnet
 
-### Security Best Practices for Bastion Hosts
-| Practice | Description |
-|:---|:---|
-| Use restrictive security groups | Allow inbound SSH (TCP 22) or RDP (TCP 3389) only from **your known IPs**. |
-| Disable password login | Enforce **key-based authentication** (SSH keys). |
-| Enable logging | Enable session logging (e.g., using Systems Manager Session Manager). |
-| Harden the server | Regularly patch and monitor the Bastion Host. |
-
----
-
-### What happens if you don't restrict Bastion Host Security Groups properly?
-- **High Risk of Attack**:
-  - Open SSH or RDP ports to `0.0.0.0/0` (anyone on the internet) makes it vulnerable to brute-force and hacking attempts.
-  - Attackers could compromise the Bastion Host and then move laterally inside your private network (a technique called "pivoting").
-
----
-
-## 4. Internet Gateway vs NAT Gateway: Key Differences
-
-| Feature                     | Internet Gateway (IGW)            | NAT Gateway                         |
-|------------------------------|-----------------------------------|-------------------------------------|
-| Purpose                      | Bidirectional internet access     | Outbound internet access only       |
-| Type of instances it serves  | Instances with public IP          | Instances without public IP         |
-| Direction of traffic         | Inbound and outbound              | Outbound only                       |
-| Associated with              | Public subnet route table         | Private subnet route table          |
-| Elastic IP needed            | No                                | Yes (for Public NAT Gateway)        |
-| Supports private connectivity | No | Yes (Private NAT Gateway supports VPC-to-VPC without public internet) |
+### ✅ Part 3: VPC Peering
+1. Go to **VPC Dashboard > Peering Connections**
+2. Create request from `devops-vpc-a` to `devops-vpc-b`
+3. Accept the request in `devops-vpc-b`
+4. Update route tables in both VPCs
+5. Verify connectivity (use ICMP or SSH)
 
 ---
 
-## 5. Practical Lab Activities for Class
+## 💡 Real-World Use Cases
 
-### Setup
-- Create a **VPC** with:
-  - 1 Public Subnet
-  - 1 Private Subnet
+### Security Groups:
+- Allow only app tier to access databases
+- Restrict public access to internal services
 
-### Internet Gateway Lab
-- Attach an **Internet Gateway** to the VPC.
-- Route the **public subnet's** traffic to the Internet Gateway.
-- Launch an EC2 instance (public IP) in the public subnet and confirm internet access.
+### NACLs:
+- Block malicious IPs at subnet level
+- Prevent internal lateral movement during attacks
 
-### NAT Gateway Lab
-- Create a **NAT Gateway** in the public subnet.
-- Route the **private subnet's** traffic to the NAT Gateway.
-- Launch an EC2 instance (without a public IP) in the private subnet.
-- SSH into the instance through the Bastion Host or Systems Manager and verify outbound internet access (e.g., `yum update`).
-
-### Bastion Host Lab
-- Deploy a **Bastion Host** EC2 instance in the public subnet.
-- Open inbound SSH port **only from your IP address**.
-- SSH into the Bastion Host.
-- From Bastion Host, SSH into the private EC2 instance.
+### VPC Peering:
+- Enable shared logging/monitoring VPC
+- Isolate environments but allow communication
 
 ---
 
-# Final Summary for Day 13 🚀
-
-- **Internet Gateway** provides direct public access to instances with public IPs.
-- **NAT Gateway** allows private instances to reach out to the internet **securely**.
-- **Bastion Host** provides **secure remote access** to private instances without exposing them to the internet.
-- **Security Groups and Routing are Critical** for proper and secure architecture.
-- Always **restrict traffic tightly** to enhance security posture.
+## 🔒 Tips & Best Practices
+- SGs are **your first line of defense**
+- Use NACLs for **additional subnet-level protection**
+- Document peering connections and rules
+- Apply **consistent naming conventions**
+  - e.g., `dev-app-sg`, `qa-db-nacl`
+- Regularly audit and optimize rules
 
 ---
 
-# 📢 Note:
-✅ You can also replace the Bastion Host with **AWS Systems Manager Session Manager** (for even better security — no open SSH ports at all).
+## 📌 Summary Comparison Table
+
+| Feature        | Security Groups        | NACLs                  | VPC Peering             |
+|----------------|-------------------------|--------------------------|--------------------------|
+| Level          | Instance                | Subnet                   | VPC                      |
+| Type           | Stateful                | Stateless                | Private connectivity     |
+| Rules          | Allow only              | Allow + Deny             | Needs route updates      |
+| Scope          | ENIs (instance level)   | Subnets                  | Entire VPCs              |
+
