@@ -8,6 +8,13 @@
 - A **horizontally scaled**, **redundant**, and **highly available** AWS service that enables communication between instances in your VPC and the **internet**.
 - It supports both **IPv4** and **IPv6** traffic.
 
+
+
+
+[![](https://img.youtube.com/vi/jgR16ACHw2M/0.jpg)](https://www.youtube.com/watch?v=jgR16ACHw2M)
+
+[Watch the video](https://www.youtube.com/watch?v=jgR16ACHw2M)
+
 ### Why do we need an Internet Gateway?
 - To allow resources in a **public subnet** to:
   - Initiate **outbound** connections to the internet.
