@@ -1,5 +1,5 @@
 Hello everyone! 👋
-As we’ve now covered several important days in our 90 Days DevOps Challenge, it's time to showcase your learning and progress!
+* As we’ve now covered several important days in our 90 Days DevOps Challenge, it's time to showcase your learning and progress!
 
 ### Task for Today:
 1.	Go to our LinkedIn group.
