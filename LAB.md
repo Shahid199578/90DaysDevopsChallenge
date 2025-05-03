@@ -106,6 +106,7 @@ DevOps 90-Day Challenge – Lab Summary
 - Restore volume from snapshot.
 ---
 ***Day 11: VPC – Subnets, Route Tables, Gateways***
+
 #### ***Lab Tasks:***
 - Create custom VPC with public and private subnets.
 - Configure route tables and IGW.
@@ -113,6 +114,7 @@ DevOps 90-Day Challenge – Lab Summary
 - Set up proper routing for internet access.
 ---
 ***Day 12: Security Groups, NACLs, and VPC Peering***
+
 #### ***Lab Tasks:***
 - Create Security Groups with specific port rules.
 - Create NACLs to allow/block subnet-level access.
@@ -120,6 +122,7 @@ DevOps 90-Day Challenge – Lab Summary
 - Test connectivity using ping and telnet.
 ---
 ***Day 13: NAT Gateway, Internet Gateway, Bastion Host***
+
 #### ***Lab Tasks:***
 - Create NAT Gateway in public subnet.
 - Use NAT for outbound internet access from private subnet.
@@ -127,6 +130,7 @@ DevOps 90-Day Challenge – Lab Summary
 - SSH into Bastion, then into private EC2 using private IP.
 ---
 ***Day 14: Linux Deep Dive – Permissions, Processes, Services***
+
 #### ***Lab Tasks:***
 - Practice chmod, chown, ls -l on test files.
 - Add users and groups; switch users and set passwords.
