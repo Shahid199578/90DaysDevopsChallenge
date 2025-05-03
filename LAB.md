@@ -30,23 +30,23 @@ ________________________________________
 DevOps 90-Day Challenge – Lab Summary
 
 
-#### Day 1: Introduction to DevOps and Cloud Computing
-* Lab Tasks:
+***Day 1: Introduction to DevOps and Cloud Computing ***
+#### ***Lab Tasks:***
 - Understand DevOps lifecycle with real-world examples.
 - Compare traditional vs DevOps workflows.
 - Identify cloud providers (AWS, Azure, GCP).
 - Research IaaS vs PaaS vs SaaS.
 - Create a free AWS account (preparation for Day 3).
 ________________________________________
-🟩 Day 2: AWS Fundamentals and Services Overview
-Lab Tasks:
-•	Log in to AWS Console.
-•	Navigate through AWS services (EC2, S3, IAM, RDS, VPC).
-•	Understand global infrastructure: Regions & AZs.
-•	Hands-on: Launch the AWS pricing calculator and estimate costs.
+***Day 2: AWS Fundamentals and Services Overview***
+#### ***Lab Tasks:***
+- Log in to AWS Console.
+- Navigate through AWS services (EC2, S3, IAM, RDS, VPC).
+- Understand global infrastructure: Regions & AZs.
+- Hands-on: Launch the AWS pricing calculator and estimate costs.
 ________________________________________
 ***Day 3: AWS Free Tier Account and AWS CLI Setup***
-### ***Lab Tasks:***
+#### ***Lab Tasks:***
 - Set up AWS CLI on your system.
 - Configure CLI with aws configure.
 - Run basic AWS CLI commands:
@@ -54,79 +54,79 @@ ________________________________________
   - aws ec2 describe-instances
 - Verify CLI and Console access.
 ________________________________________
-🟩 Day 4: IAM (Identity and Access Management)
-Lab Tasks:
-•	Create IAM Users, Groups, and Roles.
-•	Apply least privilege policies.
-•	Use AWS managed and custom policies.
-•	Create programmatic access credentials.
-•	Enable MFA for an IAM user.
+***Day 4: IAM (Identity and Access Management)***
+#### ***Lab Tasks:***
+- Create IAM Users, Groups, and Roles.
+- Apply least privilege policies.
+- Use AWS managed and custom policies.
+- Create programmatic access credentials.
+- Enable MFA for an IAM user.
 ________________________________________
-🟩 Day 5: Git and GitHub Basics
-Lab Tasks:
-•	Install Git and configure user identity.
-•	Initialize a local Git repo.
-•	Create a repo on GitHub.
-•	Push local code to GitHub.
-•	Practice branching and merging.
+***Day 5: Git and GitHub Basics***
+#### ***Lab Tasks:***
+- Install Git and configure user identity.
+- Initialize a local Git repo.
+- Create a repo on GitHub.
+- Push local code to GitHub.
+- Practice branching and merging.
 ________________________________________
-🟩 Day 6: Linux Basics for DevOps
-Lab Tasks:
-•	Connect to EC2 Linux instance.
-•	Practice Linux commands: ls, cd, pwd, mkdir, rm, cat.
-•	Use sudo, chmod, and chown.
-•	Create and edit files using nano or vim.
+***Day 6: Linux Basics for DevOps***
+#### ***Lab Tasks:***
+- Connect to EC2 Linux instance.
+- Practice Linux commands: ls, cd, pwd, mkdir, rm, cat.
+- Use sudo, chmod, and chown.
+- Create and edit files using nano or vim.
 ________________________________________
-🟩 Day 7: EC2 Launch and SSH Access
-Lab Tasks:
+***Day 7: EC2 Launch and SSH Access***
+#### ***Lab Tasks:***
 •	Launch a new EC2 instance with proper key pair.
 •	Use security groups to allow SSH (port 22).
 •	Connect to instance using ssh -i key.pem ec2-user@ip.
 •	Perform basic system update and software install.
 ________________________________________
-🟩 Day 8: EC2 Auto Scaling and Monitoring
-Lab Tasks:
+***Day 8: EC2 Auto Scaling and Monitoring***
+#### ***Lab Tasks:***
 •	Create a Launch Template.
 •	Configure Auto Scaling Group with minimum and max instances.
 •	Attach CloudWatch alarm to scale based on CPU usage.
 •	Terminate instances and watch ASG relaunch automatically.
 ________________________________________
-🟩 Day 9: EBS and S3 Storage
-Lab Tasks:
+***Day 9: EBS and S3 Storage***
+#### ***Lab Tasks:***
 •	Create and attach EBS volume to EC2.
 •	Mount and format EBS volume.
 •	Create and access S3 bucket using CLI.
 •	Upload/download files from EC2 to S3.
 ________________________________________
-🟩 Day 10: Snapshots and AMIs
-Lab Tasks:
+***Day 10: Snapshots and AMIs***
+#### ***Lab Tasks:***
 •	Create snapshot of EBS volume.
 •	Create custom AMI from EC2 instance.
 •	Launch a new instance from the AMI.
 •	Restore volume from snapshot.
 ________________________________________
-🟩 Day 11: VPC – Subnets, Route Tables, Gateways
+***Day 11: VPC – Subnets, Route Tables, Gateways***
 Lab Tasks:
 •	Create custom VPC with public and private subnets.
 •	Configure route tables and IGW.
 •	Launch EC2 in custom subnets and test connectivity.
 •	Set up proper routing for internet access.
 ________________________________________
-🟩 Day 12: Security Groups, NACLs, and VPC Peering
+***Day 12: Security Groups, NACLs, and VPC Peering***
 Lab Tasks:
 •	Create Security Groups with specific port rules.
 •	Create NACLs to allow/block subnet-level access.
 •	Create and configure VPC peering between two VPCs.
 •	Test connectivity using ping and telnet.
 ________________________________________
-🟩 Day 13: NAT Gateway, Internet Gateway, Bastion Host
+***Day 13: NAT Gateway, Internet Gateway, Bastion Host***
 Lab Tasks:
 •	Create NAT Gateway in public subnet.
 •	Use NAT for outbound internet access from private subnet.
 •	Launch Bastion Host in public subnet.
 •	SSH into Bastion, then into private EC2 using private IP.
 ________________________________________
-🟩 Day 14: Linux Deep Dive – Permissions, Processes, Services
+***Day 14: Linux Deep Dive – Permissions, Processes, Services***
 Lab Tasks:
 •	Practice chmod, chown, ls -l on test files.
 •	Add users and groups; switch users and set passwords.
