@@ -19,6 +19,8 @@ As we’ve now covered several important days in our 90 Days DevOps Challenge, i
 - It helps solidify your knowledge.
 - It builds your professional presence on LinkedIn.
 - You can inspire others to join and learn!
+
+
 💡 Keep it short but meaningful. No need to write essays — just share your real experience and learning!
 Let’s celebrate your progress. Proud of how far you all have come! 🙌
 
@@ -26,13 +28,15 @@ Let’s celebrate your progress. Proud of how far you all have come! 🙌
 Here's a Day-wise Lab Summary you can share post on LinkedIn to encourage engagement:
 ________________________________________
 DevOps 90-Day Challenge – Lab Summary
-🟩 Day 1: Introduction to DevOps and Cloud Computing
-Lab Tasks:
-•	Understand DevOps lifecycle with real-world examples.
-•	Compare traditional vs DevOps workflows.
-•	Identify cloud providers (AWS, Azure, GCP).
-•	Research IaaS vs PaaS vs SaaS.
-•	Create a free AWS account (preparation for Day 3).
+
+
+#### Day 1: Introduction to DevOps and Cloud Computing
+* Lab Tasks:
+- Understand DevOps lifecycle with real-world examples.
+- Compare traditional vs DevOps workflows.
+- Identify cloud providers (AWS, Azure, GCP).
+- Research IaaS vs PaaS vs SaaS.
+- Create a free AWS account (preparation for Day 3).
 ________________________________________
 🟩 Day 2: AWS Fundamentals and Services Overview
 Lab Tasks:
