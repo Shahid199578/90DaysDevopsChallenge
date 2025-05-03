@@ -37,7 +37,7 @@ Lab Tasks:
 •	Hands-on: Launch the AWS pricing calculator and estimate costs.
 ________________________________________
 ***Day 3: AWS Free Tier Account and AWS CLI Setup***
-- ***Lab Tasks:***
+### ***Lab Tasks:***
 - Set up AWS CLI on your system.
 - Configure CLI with aws configure.
 - Run basic AWS CLI commands:
