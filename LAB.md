@@ -30,7 +30,7 @@ ________________________________________
 DevOps 90-Day Challenge – Lab Summary
 
 
-***Day 1: Introduction to DevOps and Cloud Computing ***
+***Day 1: Introduction to DevOps and Cloud Computing***
 #### ***Lab Tasks:***
 - Understand DevOps lifecycle with real-world examples.
 - Compare traditional vs DevOps workflows.
@@ -79,59 +79,59 @@ ________________________________________
 ________________________________________
 ***Day 7: EC2 Launch and SSH Access***
 #### ***Lab Tasks:***
-•	Launch a new EC2 instance with proper key pair.
-•	Use security groups to allow SSH (port 22).
-•	Connect to instance using ssh -i key.pem ec2-user@ip.
-•	Perform basic system update and software install.
+- Launch a new EC2 instance with proper key pair.
+- Use security groups to allow SSH (port 22).
+- Connect to instance using ssh -i key.pem ec2-user@ip.
+- Perform basic system update and software install.
 ________________________________________
 ***Day 8: EC2 Auto Scaling and Monitoring***
 #### ***Lab Tasks:***
-•	Create a Launch Template.
-•	Configure Auto Scaling Group with minimum and max instances.
-•	Attach CloudWatch alarm to scale based on CPU usage.
-•	Terminate instances and watch ASG relaunch automatically.
+- Create a Launch Template.
+- Configure Auto Scaling Group with minimum and max instances.
+- Attach CloudWatch alarm to scale based on CPU usage.
+- Terminate instances and watch ASG relaunch automatically.
 ________________________________________
 ***Day 9: EBS and S3 Storage***
 #### ***Lab Tasks:***
-•	Create and attach EBS volume to EC2.
-•	Mount and format EBS volume.
-•	Create and access S3 bucket using CLI.
-•	Upload/download files from EC2 to S3.
+- Create and attach EBS volume to EC2.
+- Mount and format EBS volume.
+- Create and access S3 bucket using CLI.
+- Upload/download files from EC2 to S3.
 ________________________________________
 ***Day 10: Snapshots and AMIs***
 #### ***Lab Tasks:***
-•	Create snapshot of EBS volume.
-•	Create custom AMI from EC2 instance.
-•	Launch a new instance from the AMI.
-•	Restore volume from snapshot.
+- Create snapshot of EBS volume.
+- Create custom AMI from EC2 instance.
+- Launch a new instance from the AMI.
+- Restore volume from snapshot.
 ________________________________________
 ***Day 11: VPC – Subnets, Route Tables, Gateways***
 Lab Tasks:
-•	Create custom VPC with public and private subnets.
-•	Configure route tables and IGW.
-•	Launch EC2 in custom subnets and test connectivity.
-•	Set up proper routing for internet access.
+- Create custom VPC with public and private subnets.
+- Configure route tables and IGW.
+- Launch EC2 in custom subnets and test connectivity.
+- Set up proper routing for internet access.
 ________________________________________
 ***Day 12: Security Groups, NACLs, and VPC Peering***
 Lab Tasks:
-•	Create Security Groups with specific port rules.
-•	Create NACLs to allow/block subnet-level access.
-•	Create and configure VPC peering between two VPCs.
-•	Test connectivity using ping and telnet.
+- Create Security Groups with specific port rules.
+- Create NACLs to allow/block subnet-level access.
+- Create and configure VPC peering between two VPCs.
+- Test connectivity using ping and telnet.
 ________________________________________
 ***Day 13: NAT Gateway, Internet Gateway, Bastion Host***
 Lab Tasks:
-•	Create NAT Gateway in public subnet.
-•	Use NAT for outbound internet access from private subnet.
-•	Launch Bastion Host in public subnet.
-•	SSH into Bastion, then into private EC2 using private IP.
+- Create NAT Gateway in public subnet.
+- Use NAT for outbound internet access from private subnet.
+- Launch Bastion Host in public subnet.
+- SSH into Bastion, then into private EC2 using private IP.
 ________________________________________
 ***Day 14: Linux Deep Dive – Permissions, Processes, Services***
 Lab Tasks:
-•	Practice chmod, chown, ls -l on test files.
-•	Add users and groups; switch users and set passwords.
-•	Use ps, top, kill, systemctl to manage processes and services.
-•	Install and manage Nginx service.
+- Practice chmod, chown, ls -l on test files.
+- Add users and groups; switch users and set passwords.
+- Use ps, top, kill, systemctl to manage processes and services.
+- Install and manage Nginx service.
 
 🎯 Action for Everyone:
 Post your learnings in our LinkedIn group, tag me, and share any screenshots or key takeaways. Let’s build a visible DevOps learning community!
