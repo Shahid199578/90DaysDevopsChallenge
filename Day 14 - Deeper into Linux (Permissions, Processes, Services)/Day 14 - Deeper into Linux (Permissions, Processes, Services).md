@@ -3,9 +3,9 @@
 
 
 
-[![](https://img.youtube.com/vi/jgR16ACHw2M/0.jpg)](https://www.youtube.com/watch?v=jgR16ACHw2M)
+[![](https://img.youtube.com/vi/7MU50J-vYCc/0.jpg)](https://www.youtube.com/watch?v=7MU50J-vYCc)
 
-[Watch the video](https://www.youtube.com/watch?v=jgR16ACHw2M)
+[Watch the video](https://www.youtube.com/watch?v=7MU50J-vYCc)
 
 ### Viewing Permissions
 - **ls -l**: Displays file permissions in the long listing format.
