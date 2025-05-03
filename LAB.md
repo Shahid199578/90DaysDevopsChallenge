@@ -36,14 +36,14 @@ Lab Tasks:
 •	Understand global infrastructure: Regions & AZs.
 •	Hands-on: Launch the AWS pricing calculator and estimate costs.
 ________________________________________
-🟩 Day 3: AWS Free Tier Account and AWS CLI Setup
-Lab Tasks:
-•	Set up AWS CLI on your system.
-•	Configure CLI with aws configure.
-•	Run basic AWS CLI commands:
-o	aws s3 ls
-o	aws ec2 describe-instances
-•	Verify CLI and Console access.
+***Day 3: AWS Free Tier Account and AWS CLI Setup***
+***Lab Tasks:***
+- Set up AWS CLI on your system.
+- Configure CLI with aws configure.
+- Run basic AWS CLI commands:
+  -	aws s3 ls
+  - aws ec2 describe-instances
+- Verify CLI and Console access.
 ________________________________________
 🟩 Day 4: IAM (Identity and Access Management)
 Lab Tasks:
