@@ -1,7 +1,6 @@
 Hello everyone! 👋
----
 As we’ve now covered several important days in our 90 Days DevOps Challenge, it's time to showcase your learning and progress!
----
+
 ### Task for Today:
 1.	Go to our LinkedIn group.
 2.	Create a post summarizing what you've learned so far — from Day 1 up to today (e.g., IAM, EC2, VPCs, NACLs, Linux permissions, etc.).
