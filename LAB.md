@@ -1,19 +1,23 @@
 Hello everyone! 👋
+---
 As we’ve now covered several important days in our 90 Days DevOps Challenge, it's time to showcase your learning and progress!
-📝 Task for Today:
+---
+### Task for Today:
 1.	Go to our LinkedIn group.
 2.	Create a post summarizing what you've learned so far — from Day 1 up to today (e.g., IAM, EC2, VPCs, NACLs, Linux permissions, etc.).
 3.	Feel free to add:
-o	Key takeaways
-o	Any hands-on labs or screenshots
-o	What you found interesting or challenging
+    - Key takeaways
+    - Any hands-on labs or screenshots
+    - What you found interesting or challenging
 4.	Tag me (@mohd-shahid-mohd) in your post.
 5.	Use hashtags like:
+```
 #DevOpsChallenge #LearningInPublic #AWS #Linux #CloudComputing
+```
 🎯 Why this matters:
-•	It helps solidify your knowledge.
-•	It builds your professional presence on LinkedIn.
-•	You can inspire others to join and learn!
+- It helps solidify your knowledge.
+- It builds your professional presence on LinkedIn.
+- You can inspire others to join and learn!
 💡 Keep it short but meaningful. No need to write essays — just share your real experience and learning!
 Let’s celebrate your progress. Proud of how far you all have come! 🙌
 
