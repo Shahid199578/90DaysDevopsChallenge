@@ -76,6 +76,15 @@ else
   echo "10 or less"
 fi
 ```
+Comparison Operators:
+| Operator | Meaning               |
+| -------- | --------------------- |
+| `-eq`    | equal to              |
+| `-ne`    | not equal to          |
+| `-gt`    | greater than          |
+| `-lt`    | less than             |
+| `-ge`    | greater than or equal |
+| `-le`    | less than or equal    |
 
 ---
 
