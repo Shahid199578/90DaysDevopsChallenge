@@ -155,7 +155,7 @@ DevOps 90-Day Challenge – Lab Summary
 3. Write a Script to Monitor and Manage Processes
 
 - Use ps, top, and kill within a script to check and stop processes.
-    Example: Automatically kill a zombie process.
+  - Example: Automatically kill a zombie process.
 
 4. Script to Manage System Services
 
