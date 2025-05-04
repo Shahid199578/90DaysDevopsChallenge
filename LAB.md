@@ -137,5 +137,31 @@ DevOps 90-Day Challenge – Lab Summary
 - Use ps, top, kill, systemctl to manage processes and services.
 - Install and manage Nginx service.
 
+---
+
+***Day 15: Introduction to Shell Scripting***
+
+#### ***Lab Tasks:***
+1. Create and Run Your First Shell Script
+
+- Write a basic hello.sh script using echo.
+- Make it executable with chmod +x.
+
+2. Create a Script to Add Users and Groups
+
+- Write a shell script to add a new user and group.
+- Include user switching (su) and password setup using passwd.
+
+3. Write a Script to Monitor and Manage Processes
+
+- Use ps, top, and kill within a script to check and stop processes.
+    Example: Automatically kill a zombie process.
+
+4. Script to Manage System Services
+
+- Install nginx via a script (sudo apt install nginx -y).
+- Start, stop, and enable it using systemctl inside the script.
+
+
 🎯 Action for Everyone:
 Post your learnings in our LinkedIn group, tag me, and share any screenshots or key takeaways. Let’s build a visible DevOps learning community!
