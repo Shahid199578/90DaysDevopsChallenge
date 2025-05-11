@@ -34,7 +34,7 @@ The challenge is divided into **90 days**, with each day dedicated to learning a
 ## 90-Day DevOps Roadmap
 
 ## Phase 1: Foundations (Days 1–15)
-- **Day 1**: [Introduction to DevOps and Cloud Computing](Day 1 - Introduction to DevOps and Cloud Computing)
+- [**Day 1**: Introduction to DevOps and Cloud Computing](Day 1 - Introduction to DevOps and Cloud Computing)
 - **Day 2**: AWS Fundamentals and Services Overview
 - **Day 3**: Setting Up AWS Free Tier Account and CLI
 - **Day 4**: IAM Basics – Users, Roles, Policies
