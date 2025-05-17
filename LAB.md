@@ -162,6 +162,121 @@ DevOps 90-Day Challenge – Lab Summary
 - Install nginx via a script (sudo apt install nginx -y).
 - Start, stop, and enable it using systemctl inside the script.
 
+---
+
+### ***Day 16: Introduction to AWS CloudWatch***
+
+#### ***Lab Tasks:***
+
+1. **Explore CloudWatch Dashboard**
+
+   * Navigate to AWS CloudWatch from the AWS Console.
+   * Review pre-configured dashboards for EC2, Lambda, etc.
+
+2. **Create Custom CloudWatch Alarms**
+
+   * Create an alarm to monitor EC2 instance CPU utilization.
+   * Configure thresholds and email notifications (via SNS).
+
+3. **Enable CloudWatch Agent**
+
+   * Install and configure CloudWatch Agent on an EC2 instance.
+   * Send custom system-level metrics (memory, disk, etc.).
+
+4. **Log Group Creation & Log Shipping**
+
+   * Create log groups and streams.
+   * Configure EC2 to send application logs (e.g., nginx access logs) to CloudWatch Logs.
+
+5. **Set Metric Filters**
+
+   * Set filters on log groups to trigger alerts (e.g., “ERROR” or failed login attempts).
+
+---
+
+### ***Day 17: AWS Monitoring & Alerting – Deep Dive***
+
+#### ***Lab Tasks:***
+
+1. **Use Detailed Monitoring on EC2**
+
+   * Enable detailed monitoring and review additional metrics collected every 1 minute.
+
+2. **Custom Dashboards**
+
+   * Build custom dashboards with widgets:
+
+     * EC2 CPU Utilization
+     * Disk usage
+     * Application errors
+
+3. **Create Composite Alarms**
+
+   * Set multiple metric conditions (e.g., CPU > 70% AND Memory > 80%) for alerting.
+   * Configure alarm actions (SNS, Lambda).
+
+4. **Log Insights**
+
+   * Use CloudWatch Log Insights to query log data.
+
+     * Example: Find 5xx HTTP errors in nginx logs.
+     * Example: Query logs to identify failed login attempts.
+
+5. **Alert Automation**
+
+   * Trigger Lambda functions on alarm (e.g., restart EC2 or notify Slack).
+
+---
+
+### ***Day 18: AWS CloudTrail and Centralized Logging with ELK Stack***
+
+#### ***Lab Tasks – Part 1: AWS CloudTrail***
+
+1. **Enable CloudTrail for All Regions**
+
+   * Create a trail and send logs to an S3 bucket.
+   * Enable log validation for tamper detection.
+
+2. **Log Analysis with CloudTrail**
+
+   * Use AWS CLI to query events:
+
+     ```bash
+     aws cloudtrail lookup-events --max-results 5
+     ```
+   * Use Athena to query logs stored in S3.
+
+3. **Forward CloudTrail Logs to CloudWatch**
+
+   * Integrate with CloudWatch Logs for real-time event monitoring.
+
+---
+
+#### ***Lab Tasks – Part 2: ELK Stack for Centralized Logging***
+
+1. **Understand ELK Components**
+
+   * **Elasticsearch**: Stores & indexes logs.
+   * **Logstash**: Ingests and transforms logs.
+   * **Kibana**: Visualizes logs and metrics.
+
+2. **Deploy ELK on EC2 (Optional – Advanced)**
+
+   * Install and configure Elasticsearch, Logstash, and Kibana.
+   * Open ports: 9200 (ES), 5601 (Kibana), 5044 (Logstash).
+
+3. **Ingest Logs from S3 (CloudTrail)**
+
+   * Configure Logstash to pull logs from S3.
+   * Transform JSON data and send to Elasticsearch.
+
+4. **Visualize in Kibana**
+
+   * Create index patterns, dashboards, and search logs.
+   * Create alerts and filters for suspicious events.
+
+---
+
 
 🎯 Action for Everyone:
 Post your learnings in our LinkedIn group, tag me, and share any screenshots or key takeaways. Let’s build a visible DevOps learning community!
