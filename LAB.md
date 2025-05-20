@@ -276,6 +276,11 @@ DevOps 90-Day Challenge – Lab Summary
    * Create alerts and filters for suspicious events.
 
 ---
+### ***Day 19: Introduction to Docker and Containerization***
+
+1. **Understand Docker Components**
+
+---
 
 
 🎯 Action for Everyone:
