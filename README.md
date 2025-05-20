@@ -135,7 +135,7 @@ The challenge is divided into **90 days**, with each day dedicated to learning a
 
 ---
 
-## **Hands-On Projects**
+## [**Hands-On Projects**](./LAB.md)
 Throughout the challenge, you will work on various projects, including:
 - Building a Web Server on AWS
 - Automating CI/CD Pipelines
