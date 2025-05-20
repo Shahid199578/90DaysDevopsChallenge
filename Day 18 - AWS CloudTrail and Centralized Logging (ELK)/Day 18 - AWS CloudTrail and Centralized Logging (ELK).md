@@ -1,5 +1,9 @@
 ﻿# Day 18 - AWS CloudTrail and Centralized Logging (ELK)
 
+[![](https://img.youtube.com/vi/AuNvc334X1s/0.jpg)](https://www.youtube.com/watch?v=AuNvc334X1s)
+
+[Watch the video](https://www.youtube.com/watch?v=AuNvc334X1s)
+
 ## Part 1: AWS CloudTrail – Monitoring AWS API Calls
 
 ### What is AWS CloudTrail?
