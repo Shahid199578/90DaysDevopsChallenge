@@ -321,7 +321,7 @@ DevOps 90-Day Challenge – Lab Summary
 4. **Build the Docker Image**
 
    ```bash
-      
+   docker build -t flask-app .
    ```
 
 ---
