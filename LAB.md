@@ -282,6 +282,118 @@ DevOps 90-Day Challenge – Lab Summary
 
 ---
 
+### ***Day 20: Building and Running Docker Containers***
+
+---
+
+#### ***Lab Tasks – Part 1: Writing a Dockerfile and Building a Docker Image***
+
+1. **Create a Simple App Directory**
+
+   ```bash
+   mkdir docker-demo && cd docker-demo
+   ```
+
+2. **Write a Simple Python App**
+   Create a file named `app.py`:
+
+   ```python
+   print("Hello from inside Docker!")
+   ```
+
+3. **Write the Dockerfile**
+   Create a file named `Dockerfile`:
+
+   ```dockerfile
+   # Use an official Python base image
+   FROM python:3.9-slim
+
+   # Set the working directory
+   WORKDIR /app
+
+   # Copy current directory contents into the container
+   COPY . .
+
+   # Run the app
+   CMD ["python", "app.py"]
+   ```
+
+4. **Build the Docker Image**
+
+   ```bash
+      
+   ```
+
+---
+
+#### ***Lab Tasks – Part 2: Running and Managing Docker Containers***
+
+1. **Run a Container**
+
+   ```bash
+   docker run my-python-app
+   ```
+
+2. **Run in Detached Mode**
+
+   ```bash
+   docker run -d --name demo-container my-python-app
+   ```
+
+3. **View Running Containers**
+
+   ```bash
+   docker ps
+   ```
+
+4. **Stop and Remove Container**
+
+   ```bash
+   docker stop demo-container
+   docker rm demo-container
+   ```
+
+---
+
+#### ***Lab Tasks – Part 3: Docker Image Management Commands***
+
+1. **View All Images**
+
+   ```bash
+   docker images
+   ```
+
+2. **Tag an Image**
+
+   ```bash
+   docker tag my-python-app shahiddevops/my-python-app:v1
+   ```
+
+3. **Commit a Running Container to an Image**
+
+   ```bash
+   docker commit <container_id> shahiddevops/custom-image:v1
+   ```
+
+4. **Login to Docker Hub**
+
+   ```bash
+   docker login
+   ```
+
+5. **Push Image to Docker Hub**
+
+   ```bash
+   docker push shahiddevops/my-python-app:v1
+   ```
+
+6. **Pull Image from Docker Hub**
+
+   ```bash
+   docker pull shahiddevops/my-python-app:v1
+   ```
+
+---
 
 🎯 Action for Everyone:
 Post your learnings in our LinkedIn group, tag me, and share any screenshots or key takeaways. Let’s build a visible DevOps learning community!
