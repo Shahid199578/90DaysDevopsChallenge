@@ -392,8 +392,120 @@ DevOps 90-Day Challenge – Lab Summary
    ```bash
    docker pull shahiddevops/my-python-app:v1
    ```
+---
+
+## 🚀 **Day 21: Docker Networking, Volumes, and Compose Projects**
 
 ---
+
+### **Part 1: Docker Networking**
+
+#### 🔹 Task 1: Create and Use a Custom Bridge Network
+
+* Create a bridge network.
+* Run two Alpine containers on this network.
+* Test communication between the containers using container names.
+
+---
+
+#### 🔹 Task 2: Host Network Mode (Linux only)
+
+* Run an Nginx container in `--network host` mode.
+* Access the Nginx web server via `localhost`.
+
+---
+
+#### 🔹 Task 3: Overlay Network (Docker Swarm)
+
+* Initialize Docker Swarm.
+* Create an overlay network.
+* Deploy an Nginx service with 2 replicas on the overlay network.
+* List and inspect service and network details.
+
+---
+
+### **Part 2: Docker Volumes and Data Persistence**
+
+#### 🔹 Task 1: Named Volume
+
+* Create a named volume.
+* Mount it into a container.
+* Add data to the volume and verify it from another container.
+
+---
+
+#### 🔹 Task 2: Bind Mount from Host
+
+* Create a directory and a file on the host.
+* Bind mount the host directory into a container.
+* Read the file from inside the container.
+
+---
+
+#### 🔹 Task 3: tmpfs (In-Memory Mount)
+
+* Run a container with a `tmpfs` mount.
+* Write and read data inside the `tmpfs` directory.
+* Verify data does not persist after the container stops.
+
+---
+
+### **Part 3: Multi-Container App with Docker Compose**
+
+#### Folder Structure:
+
+```
+multi-app/
+├── app.py
+├── Dockerfile
+├── requirements.txt
+└── docker-compose.yml
+```
+
+---
+
+#### 🔹 Step 1: Create a Flask App (`app.py`)
+
+* Create a simple web app using Flask.
+* Use Redis to store a counter for page views.
+
+---
+
+#### 🔹 Step 2: Define Dependencies (`requirements.txt`)
+
+* Add necessary Python packages.
+
+---
+
+#### 🔹 Step 3: Write a Dockerfile
+
+* Use Python base image.
+* Copy application files and install dependencies.
+* Set the container's startup command.
+
+---
+
+#### 🔹 Step 4: Define `docker-compose.yml`
+
+* Define `web` and `redis` services.
+* Configure ports, networks, and dependencies.
+
+---
+
+#### 🔹 Step 5: Build and Run
+
+* Use Docker Compose to build and launch the application.
+* Access the app in a web browser.
+
+---
+
+#### Cleanup Tasks
+
+* Stop and remove containers, volumes, and networks.
+* Leave Docker Swarm mode.
+
+---
+
 
 🎯 Action for Everyone:
 Post your learnings in our LinkedIn group, tag me, and share any screenshots or key takeaways. Let’s build a visible DevOps learning community!
