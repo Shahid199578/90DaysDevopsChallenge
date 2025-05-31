@@ -1,5 +1,10 @@
 ﻿# Day 22 - Dockerizing a Sample App
 
+
+[![](https://img.youtube.com/vi/rKm-_VdjTsU/0.jpg)](https://www.youtube.com/watch?v=rKm-_VdjTsU)
+
+[Watch the video](https://www.youtube.com/watch?v=rKm-_VdjTsU)
+
 ## 🎯 Objective
 
 Learn how to Dockerize a full-stack application (Frontend + Backend) using Docker and run both services using Docker Compose. You’ll also use environment variables to configure the application.
