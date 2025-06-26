@@ -506,6 +506,23 @@ multi-app/
 
 ---
 
+## DAY 25 -  Kubernetes Services, Ingress, and Load Balancing
+
+1. Deploy a basic NGINX Deployment.
+2. Create a NodePort Service to expose it.
+3. Install `nginx-ingress` and configure an Ingress resource.
+4. Update your `/etc/hosts` file and test the routing.
+
+---
+
+
+## Day 26 – Kubernetes Volumes, ConfigMaps, and Secrets
+
+- Create and mount a PersistentVolume and PersistentVolumeClaim.
+- Use ConfigMap to provide configuration values to a Pod.
+- Inject Secrets into a Pod and print them from the container logs.
+
+---
 
 🎯 Action for Everyone:
 Post your learnings in our LinkedIn group, tag me, and share any screenshots or key takeaways. Let’s build a visible DevOps learning community!
