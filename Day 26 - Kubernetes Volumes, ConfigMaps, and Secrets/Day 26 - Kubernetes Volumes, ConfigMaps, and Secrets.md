@@ -1,6 +1,10 @@
 ﻿# Day 26 – Kubernetes Volumes, ConfigMaps, and Secrets
 
-**Date:** June 26, 2025
+
+[![](https://img.youtube.com/vi/Qc60pavEJFw/0.jpg)](https://www.youtube.com/watch?v=Qc60pavEJFw)
+
+[Watch the video](https://www.youtube.com/watch?v=Qc60pavEJFw)
+
 
 ## 🎯 Objectives
 - Understand the concept of Kubernetes Volumes and their types.

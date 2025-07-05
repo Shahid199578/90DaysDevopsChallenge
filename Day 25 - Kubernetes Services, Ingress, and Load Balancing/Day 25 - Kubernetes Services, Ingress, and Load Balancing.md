@@ -1,6 +1,13 @@
 ﻿# Day 25 - Kubernetes Services, Ingress, and Load Balancing
 Welcome to Day 25 of the 90 Days of DevOps Challenge! Today we’re diving into how networking works in Kubernetes with **Services**, **Ingress**, and **Load Balancing**.
 
+
+[![](https://img.youtube.com/vi/AWHPZrwjUeU/0.jpg)](https://www.youtube.com/watch?v=AWHPZrwjUeU)
+
+[Watch the video](https://www.youtube.com/watch?v=AWHPZrwjUeU)
+
+
+
 ---
 
 ## 🧩 Why Do We Need Services?

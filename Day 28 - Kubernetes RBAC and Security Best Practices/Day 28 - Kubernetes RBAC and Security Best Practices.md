@@ -1,5 +1,13 @@
 ﻿# Day 28 - Kubernetes RBAC and Security Best Practices
 ---
+
+
+[![](https://img.youtube.com/vi/QrMMuyJcDZg/0.jpg)](https://www.youtube.com/watch?v=QrMMuyJcDZg)
+
+[Watch the video](https://www.youtube.com/watch?v=QrMMuyJcDZg)
+
+
+
 ## What is RBAC?
 RBAC (Role-Based Access Control) controls who can perform what actions on which resources.  
 It ensures fine-grained permissions and integrates with the Kubernetes API server.  

@@ -1,6 +1,12 @@
 ﻿# Day 23 - Introduction to Kubernetes
 Welcome to Day 23 of the 90 Days of DevOps Challenge! Today, we begin our journey into **Kubernetes** — the most widely used container orchestration platform.
 
+[![](https://img.youtube.com/vi/gFYI2oyX4Ew/0.jpg)](https://www.youtube.com/watch?v=gFYI2oyX4Ew)
+
+[Watch the video](https://www.youtube.com/watch?v=gFYI2oyX4Ew)
+
+
+
 ---
 
 ## 🌟 What is Kubernetes?

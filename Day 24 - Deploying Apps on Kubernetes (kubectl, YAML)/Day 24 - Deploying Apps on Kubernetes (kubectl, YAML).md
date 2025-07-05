@@ -4,6 +4,11 @@
 
 A **Kubernetes cluster** is a collection of computers (called nodes) that run containerized applications managed by Kubernetes. It abstracts away the underlying hardware and provides a powerful, scalable, and self-healing platform for running your applications.
 
+
+[![](https://img.youtube.com/vi/aeXJyxX7j6Y/0.jpg)](https://www.youtube.com/watch?v=aeXJyxX7j6Y)
+
+[Watch the video](https://www.youtube.com/watch?v=aeXJyxX7j6Y)
+
 ### Key Components:
 
 - **Control Plane (Master Node)**  
