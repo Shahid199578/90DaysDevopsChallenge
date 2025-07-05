@@ -523,6 +523,16 @@ multi-app/
 - Inject Secrets into a Pod and print them from the container logs.
 
 ---
+## Day 29 – Helm Charts and Application Packaging
+
+- Add Bitnami repo
+- Install Redis with custom password
+- Upgrade Redis to enable persistence
+- Roll back the release
+- Uninstall the release
+
+---
+
 
 🎯 Action for Everyone:
 Post your learnings in our LinkedIn group, tag me, and share any screenshots or key takeaways. Let’s build a visible DevOps learning community!
