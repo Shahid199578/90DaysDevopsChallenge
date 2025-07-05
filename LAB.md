@@ -523,6 +523,18 @@ multi-app/
 - Inject Secrets into a Pod and print them from the container logs.
 
 ---
+
+## Day 27 - Kubernetes Monitoring (Prometheus + Grafana)
+
+1. Manually deploy Prometheus and Grafana in your cluster.
+2. Access both UIs via port forwarding.
+3. Configure Prometheus as Grafana data source.
+4. Create at least 3 panels in a custom dashboard.
+5. (Optional) Add a basic alert rule.
+
+---
+
+---
 ## Day 29 – Helm Charts and Application Packaging
 
 - Add Bitnami repo
