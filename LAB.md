@@ -506,7 +506,7 @@ multi-app/
 
 ---
 
-## DAY 25 -  Kubernetes Services, Ingress, and Load Balancing
+## Day 25 - Kubernetes Services, Ingress, and Load Balancing
 
 1. Deploy a basic NGINX Deployment.
 2. Create a NodePort Service to expose it.
@@ -514,7 +514,6 @@ multi-app/
 4. Update your `/etc/hosts` file and test the routing.
 
 ---
-
 
 ## Day 26 – Kubernetes Volumes, ConfigMaps, and Secrets
 
@@ -534,7 +533,15 @@ multi-app/
 
 ---
 
+## Day 28 – Kubernetes Logging and Troubleshooting
+
+- Deploy a sample app and view logs using `kubectl logs`.
+- Use sidecar logging pattern with a log-collector container.
+- Install EFK (Elasticsearch, Fluentd, Kibana) or Loki + Grafana.
+- Practice debugging failing pods (`kubectl describe`, `kubectl exec`).
+
 ---
+
 ## Day 29 – Helm Charts and Application Packaging
 
 - Add Bitnami repo
@@ -544,6 +551,164 @@ multi-app/
 - Uninstall the release
 
 ---
+
+## Day 30 – Real-World Kubernetes Deployment Example
+
+1. Package a Node.js app into a Docker image.
+2. Deploy it on Kubernetes using Deployment, Service, ConfigMap, Secret.
+3. Add Horizontal Pod Autoscaler.
+4. Configure Ingress for domain routing.
+5. Validate with curl or browser.
+
+---
+
+## Day 31 – Jenkins and CI/CD Fundamentals
+
+- Learn about Continuous Integration and Continuous Delivery.
+- Understand Jenkins architecture.
+- Install Jenkins locally using Docker.
+- Explore Jenkins UI, jobs, and build history.
+- Run a freestyle job.
+
+---
+
+## Day 32 – Installing Jenkins on AWS EC2
+
+1. Launch Ubuntu EC2 instance.
+2. Install Java and Jenkins.
+3. Open port 8080 in security groups.
+4. Access Jenkins dashboard in browser.
+5. Configure admin user and basic plugins.
+
+---
+
+## Day 33 – Jenkins + GitHub Integration
+
+- Connect Jenkins with GitHub using webhooks.
+- Create a Jenkins job triggered by GitHub push.
+- Clone and build code automatically.
+- View triggered builds in Jenkins UI.
+
+---
+
+## Day 34 – CI/CD for Dockerized Apps
+
+1. Create Dockerfile for a sample app.
+2. Write Jenkins pipeline to build Docker image.
+3. Push image to Docker Hub.
+4. Deploy container on server.
+5. Automate the entire pipeline.
+
+---
+
+## Day 35 – Jenkinsfile and Declarative Pipelines
+
+- Learn Jenkins Declarative Pipeline syntax.
+- Write a Jenkinsfile and commit to GitHub repo.
+- Automate pipeline with stages (Build, Test, Deploy).
+- Use environment variables and post actions.
+
+---
+
+## Day 36 – GitHub Actions Introduction
+
+1. Learn GitHub Actions workflow syntax.
+2. Create `.github/workflows/ci.yml`.
+3. Add job to run tests on push.
+4. Observe workflow runs in GitHub UI.
+
+---
+
+## Day 37 – Building Workflows with GitHub Actions
+
+- Add multiple jobs in workflow.
+- Implement job dependencies.
+- Use matrix builds for different Node.js versions.
+- Reuse workflow templates.
+
+---
+
+## Day 38 – Advanced GitHub Actions with Secrets and Artifacts
+
+1. Store secrets in GitHub repo.
+2. Use secrets in workflows securely.
+3. Upload build artifacts.
+4. Download artifacts in another job.
+5. Implement approval step.
+
+---
+
+## Day 39 – Introduction to Terraform and IaC
+
+- What is Infrastructure as Code?
+- Install Terraform CLI.
+- Write a Terraform config to provision EC2.
+- Run `terraform init`, `apply`, and `destroy`.
+- Manage infrastructure lifecycle.
+
+---
+
+## Day 40 – Writing Terraform for AWS (EC2, S3, IAM)
+
+1. Create EC2 instance with Terraform.
+2. Create S3 bucket with versioning.
+3. Create IAM user with policy.
+4. Use variables and outputs.
+
+---
+
+## Day 41 – Terraform State Management and Workspaces
+
+- Understand Terraform state file.
+- Use `terraform state list`, `show`.
+- Create remote backend with S3 + DynamoDB.
+- Work with multiple workspaces (dev, prod).
+
+---
+
+## Day 42 – Advanced Terraform Concepts (Modules, Remote Backends)
+
+1. Write reusable Terraform module.
+2. Publish module locally.
+3. Use remote backend (S3/DynamoDB).
+4. Configure remote module source.
+
+---
+
+## Day 43 – Terraform + Jenkins CI/CD Integration
+
+- Write Jenkins pipeline for Terraform.
+- Lint and validate Terraform configs.
+- Plan and apply infrastructure changes.
+- Use Jenkins credentials for AWS auth.
+
+---
+
+## Day 44 – AWS CloudFormation Basics and YAML Templates
+
+1. Write a basic CloudFormation template in YAML.
+2. Deploy stack via AWS Console.
+3. Create EC2 + Security Group.
+4. Validate template using `cfn-lint`.
+
+---
+
+## Day 45 – Writing Reusable CloudFormation Templates
+
+- Use parameters and mappings.
+- Add conditions and outputs.
+- Create nested stacks.
+- Manage templates in Git repo.
+
+---
+
+## Day 46 – Automated Infrastructure Provisioning Pipeline
+
+1. Combine Terraform and CloudFormation.
+2. Build Jenkins pipeline to deploy infra.
+3. Test infra provisioning automatically.
+4. Implement rollback on failure.
+
 
 
 🎯 Action for Everyone:
