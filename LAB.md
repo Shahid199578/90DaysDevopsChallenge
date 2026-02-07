@@ -30,23 +30,23 @@ Here's a Day-wise Lab Summary you can share post on LinkedIn to encourage engage
 DevOps 90-Day Challenge – Lab Summary
 
 
-***Day 1: Introduction to DevOps and Cloud Computing***
-#### ***Lab Tasks:***
+## Day 1 – Introduction to DevOps and Cloud Computing
+#### Lab Tasks:
 - Understand DevOps lifecycle with real-world examples.
 - Compare traditional vs DevOps workflows.
 - Identify cloud providers (AWS, Azure, GCP).
 - Research IaaS vs PaaS vs SaaS.
 - Create a free AWS account (preparation for Day 3).
 ---
-***Day 2: AWS Fundamentals and Services Overview***
-#### ***Lab Tasks:***
+## Day 2 – AWS Fundamentals and Services Overview
+#### Lab Tasks:
 - Log in to AWS Console.
 - Navigate through AWS services (EC2, S3, IAM, RDS, VPC).
 - Understand global infrastructure: Regions & AZs.
 - Hands-on: Launch the AWS pricing calculator and estimate costs.
 ---
-***Day 3: AWS Free Tier Account and AWS CLI Setup***
-#### ***Lab Tasks:***
+## Day 3 – AWS Free Tier Account and AWS CLI Setup
+#### Lab Tasks:
 - Set up AWS CLI on your system.
 - Configure CLI with aws configure.
 - Run basic AWS CLI commands:
@@ -54,84 +54,84 @@ DevOps 90-Day Challenge – Lab Summary
   - aws ec2 describe-instances
 - Verify CLI and Console access.
 ---
-***Day 4: IAM (Identity and Access Management)***
-#### ***Lab Tasks:***
+## Day 4 – IAM (Identity and Access Management)
+#### Lab Tasks:
 - Create IAM Users, Groups, and Roles.
 - Apply least privilege policies.
 - Use AWS managed and custom policies.
 - Create programmatic access credentials.
 - Enable MFA for an IAM user.
 ---
-***Day 5: Git and GitHub Basics***
-#### ***Lab Tasks:***
+## Day 5 – Git and GitHub Basics
+#### Lab Tasks:
 - Install Git and configure user identity.
 - Initialize a local Git repo.
 - Create a repo on GitHub.
 - Push local code to GitHub.
 - Practice branching and merging.
 ---
-***Day 6: Linux Basics for DevOps***
-#### ***Lab Tasks:***
+## Day 6 – Linux Basics for DevOps
+#### Lab Tasks:
 - Connect to EC2 Linux instance.
 - Practice Linux commands: ls, cd, pwd, mkdir, rm, cat.
 - Use sudo, chmod, and chown.
 - Create and edit files using nano or vim.
 ---
-***Day 7: EC2 Launch and SSH Access***
-#### ***Lab Tasks:***
+## Day 7 – EC2 Launch and SSH Access
+#### Lab Tasks:
 - Launch a new EC2 instance with proper key pair.
 - Use security groups to allow SSH (port 22).
 - Connect to instance using ssh -i key.pem ec2-user@ip.
 - Perform basic system update and software install.
 ---
-***Day 8: EC2 Auto Scaling and Monitoring***
-#### ***Lab Tasks:***
+## Day 8 – EC2 Auto Scaling and Monitoring
+#### Lab Tasks:
 - Create a Launch Template.
 - Configure Auto Scaling Group with minimum and max instances.
 - Attach CloudWatch alarm to scale based on CPU usage.
 - Terminate instances and watch ASG relaunch automatically.
 ---
-***Day 9: EBS and S3 Storage***
-#### ***Lab Tasks:***
+## Day 9 – EBS and S3 Storage
+#### Lab Tasks:
 - Create and attach EBS volume to EC2.
 - Mount and format EBS volume.
 - Create and access S3 bucket using CLI.
 - Upload/download files from EC2 to S3.
 ---
-***Day 10: Snapshots and AMIs***
-#### ***Lab Tasks:***
+## Day 10 – Snapshots and AMIs
+#### Lab Tasks:
 - Create snapshot of EBS volume.
 - Create custom AMI from EC2 instance.
 - Launch a new instance from the AMI.
 - Restore volume from snapshot.
 ---
-***Day 11: VPC – Subnets, Route Tables, Gateways***
+## Day 11 – VPC – Subnets, Route Tables, Gateways
 
-#### ***Lab Tasks:***
+#### Lab Tasks:
 - Create custom VPC with public and private subnets.
 - Configure route tables and IGW.
 - Launch EC2 in custom subnets and test connectivity.
 - Set up proper routing for internet access.
 ---
-***Day 12: Security Groups, NACLs, and VPC Peering***
+## Day 12 – Security Groups, NACLs, and VPC Peering
 
-#### ***Lab Tasks:***
+#### Lab Tasks:
 - Create Security Groups with specific port rules.
 - Create NACLs to allow/block subnet-level access.
 - Create and configure VPC peering between two VPCs.
 - Test connectivity using ping and telnet.
 ---
-***Day 13: NAT Gateway, Internet Gateway, Bastion Host***
+## Day 13 – NAT Gateway, Internet Gateway, Bastion Host
 
-#### ***Lab Tasks:***
+#### Lab Tasks:
 - Create NAT Gateway in public subnet.
 - Use NAT for outbound internet access from private subnet.
 - Launch Bastion Host in public subnet.
 - SSH into Bastion, then into private EC2 using private IP.
 ---
-***Day 14: Linux Deep Dive – Permissions, Processes, Services***
+## Day 14 – Linux Deep Dive – Permissions, Processes, Services
 
-#### ***Lab Tasks:***
+#### Lab Tasks:
 - Practice chmod, chown, ls -l on test files.
 - Add users and groups; switch users and set passwords.
 - Use ps, top, kill, systemctl to manage processes and services.
@@ -139,9 +139,9 @@ DevOps 90-Day Challenge – Lab Summary
 
 ---
 
-***Day 15: Introduction to Shell Scripting***
+## Day 15 – Introduction to Shell Scripting
 
-#### ***Lab Tasks:***
+#### Lab Tasks:
 1. Create and Run Your First Shell Script
 
 - Write a basic hello.sh script using echo.
@@ -164,9 +164,9 @@ DevOps 90-Day Challenge – Lab Summary
 
 ---
 
-### ***Day 16: Introduction to AWS CloudWatch***
+## Day 16 – Introduction to AWS CloudWatch
 
-#### ***Lab Tasks:***
+#### Lab Tasks:
 
 1. **Explore CloudWatch Dashboard**
 
@@ -194,9 +194,9 @@ DevOps 90-Day Challenge – Lab Summary
 
 ---
 
-### ***Day 17: AWS Monitoring & Alerting – Deep Dive***
+## Day 17 – AWS Monitoring & Alerting – Deep Dive
 
-#### ***Lab Tasks:***
+#### Lab Tasks:
 
 1. **Use Detailed Monitoring on EC2**
 
@@ -228,9 +228,9 @@ DevOps 90-Day Challenge – Lab Summary
 
 ---
 
-### ***Day 18: AWS CloudTrail and Centralized Logging with ELK Stack***
+## Day 18 – AWS CloudTrail and Centralized Logging with ELK Stack
 
-#### ***Lab Tasks – Part 1: AWS CloudTrail***
+#### Lab Tasks – Part 1: AWS CloudTrail
 
 1. **Enable CloudTrail for All Regions**
 
@@ -252,7 +252,7 @@ DevOps 90-Day Challenge – Lab Summary
 
 ---
 
-#### ***Lab Tasks – Part 2: ELK Stack for Centralized Logging***
+#### Lab Tasks – Part 2: ELK Stack for Centralized Logging
 
 1. **Understand ELK Components**
 
@@ -276,17 +276,17 @@ DevOps 90-Day Challenge – Lab Summary
    * Create alerts and filters for suspicious events.
 
 ---
-### ***Day 19: Introduction to Docker and Containerization***
+## Day 19 – Introduction to Docker and Containerization
 
 1. **Understand Docker Components**
 
 ---
 
-### ***Day 20: Building and Running Docker Containers***
+## Day 20 – Building and Running Docker Containers
 
 ---
 
-#### ***Lab Tasks – Part 1: Writing a Dockerfile and Building a Docker Image***
+#### Lab Tasks – Part 1: Writing a Dockerfile and Building a Docker Image
 
 1. **Create a Simple App Directory**
 
@@ -326,7 +326,7 @@ DevOps 90-Day Challenge – Lab Summary
 
 ---
 
-#### ***Lab Tasks – Part 2: Running and Managing Docker Containers***
+#### Lab Tasks – Part 2: Running and Managing Docker Containers
 
 1. **Run a Container**
 
@@ -355,7 +355,7 @@ DevOps 90-Day Challenge – Lab Summary
 
 ---
 
-#### ***Lab Tasks – Part 3: Docker Image Management Commands***
+#### Lab Tasks – Part 3: Docker Image Management Commands
 
 1. **View All Images**
 
@@ -394,11 +394,9 @@ DevOps 90-Day Challenge – Lab Summary
    ```
 ---
 
-## 🚀 **Day 21: Docker Networking, Volumes, and Compose Projects**
+## Day 21 – Docker Networking, Volumes, and Compose Projects
 
----
-
-### **Part 1: Docker Networking**
+### Part 1: Docker Networking
 
 #### 🔹 Task 1: Create and Use a Custom Bridge Network
 
@@ -406,14 +404,10 @@ DevOps 90-Day Challenge – Lab Summary
 * Run two Alpine containers on this network.
 * Test communication between the containers using container names.
 
----
-
 #### 🔹 Task 2: Host Network Mode (Linux only)
 
 * Run an Nginx container in `--network host` mode.
 * Access the Nginx web server via `localhost`.
-
----
 
 #### 🔹 Task 3: Overlay Network (Docker Swarm)
 
@@ -422,9 +416,7 @@ DevOps 90-Day Challenge – Lab Summary
 * Deploy an Nginx service with 2 replicas on the overlay network.
 * List and inspect service and network details.
 
----
-
-### **Part 2: Docker Volumes and Data Persistence**
+### Part 2: Docker Volumes and Data Persistence
 
 #### 🔹 Task 1: Named Volume
 
@@ -432,15 +424,11 @@ DevOps 90-Day Challenge – Lab Summary
 * Mount it into a container.
 * Add data to the volume and verify it from another container.
 
----
-
 #### 🔹 Task 2: Bind Mount from Host
 
 * Create a directory and a file on the host.
 * Bind mount the host directory into a container.
 * Read the file from inside the container.
-
----
 
 #### 🔹 Task 3: tmpfs (In-Memory Mount)
 
@@ -448,9 +436,7 @@ DevOps 90-Day Challenge – Lab Summary
 * Write and read data inside the `tmpfs` directory.
 * Verify data does not persist after the container stops.
 
----
-
-### **Part 3: Multi-Container App with Docker Compose**
+### Part 3: Multi-Container App with Docker Compose
 
 #### Folder Structure:
 
@@ -462,20 +448,14 @@ multi-app/
 └── docker-compose.yml
 ```
 
----
-
 #### 🔹 Step 1: Create a Flask App (`app.py`)
 
 * Create a simple web app using Flask.
 * Use Redis to store a counter for page views.
 
----
-
 #### 🔹 Step 2: Define Dependencies (`requirements.txt`)
 
 * Add necessary Python packages.
-
----
 
 #### 🔹 Step 3: Write a Dockerfile
 
@@ -483,21 +463,15 @@ multi-app/
 * Copy application files and install dependencies.
 * Set the container's startup command.
 
----
-
 #### 🔹 Step 4: Define `docker-compose.yml`
 
 * Define `web` and `redis` services.
 * Configure ports, networks, and dependencies.
 
----
-
 #### 🔹 Step 5: Build and Run
 
 * Use Docker Compose to build and launch the application.
 * Access the app in a web browser.
-
----
 
 #### Cleanup Tasks
 
@@ -506,35 +480,35 @@ multi-app/
 
 ---
 
-## Day 25 - Kubernetes Services, Ingress, and Load Balancing
-
-1. Deploy a basic NGINX Deployment.
-2. Create a NodePort Service to expose it.
-3. Install `nginx-ingress` and configure an Ingress resource.
-4. Update your `/etc/hosts` file and test the routing.
+## Day 25 – Kubernetes Services, Ingress, and Load Balancing
+#### Lab Tasks:
+- Deploy a basic NGINX Deployment.
+- Create a NodePort Service to expose it.
+- Install `nginx-ingress` and configure an Ingress resource.
+- Update your `/etc/hosts` file and test the routing.
 
 ---
 
 ## Day 26 – Kubernetes Volumes, ConfigMaps, and Secrets
-
+#### Lab Tasks:
 - Create and mount a PersistentVolume and PersistentVolumeClaim.
 - Use ConfigMap to provide configuration values to a Pod.
 - Inject Secrets into a Pod and print them from the container logs.
 
 ---
 
-## Day 27 - Kubernetes Monitoring (Prometheus + Grafana)
-
-1. Manually deploy Prometheus and Grafana in your cluster.
-2. Access both UIs via port forwarding.
-3. Configure Prometheus as Grafana data source.
-4. Create at least 3 panels in a custom dashboard.
-5. (Optional) Add a basic alert rule.
+## Day 27 – Kubernetes Monitoring (Prometheus + Grafana)
+#### Lab Tasks:
+- Manually deploy Prometheus and Grafana in your cluster.
+- Access both UIs via port forwarding.
+- Configure Prometheus as Grafana data source.
+- Create at least 3 panels in a custom dashboard.
+- (Optional) Add a basic alert rule.
 
 ---
 
 ## Day 28 – Kubernetes Logging and Troubleshooting
-
+#### Lab Tasks:
 - Deploy a sample app and view logs using `kubectl logs`.
 - Use sidecar logging pattern with a log-collector container.
 - Install EFK (Elasticsearch, Fluentd, Kibana) or Loki + Grafana.
@@ -543,27 +517,27 @@ multi-app/
 ---
 
 ## Day 29 – Helm Charts and Application Packaging
-
-- Add Bitnami repo
-- Install Redis with custom password
-- Upgrade Redis to enable persistence
-- Roll back the release
-- Uninstall the release
+#### Lab Tasks:
+- Add Bitnami repo.
+- Install Redis with custom password.
+- Upgrade Redis to enable persistence.
+- Roll back the release.
+- Uninstall the release.
 
 ---
 
 ## Day 30 – Real-World Kubernetes Deployment Example
-
-1. Package a Node.js app into a Docker image.
-2. Deploy it on Kubernetes using Deployment, Service, ConfigMap, Secret.
-3. Add Horizontal Pod Autoscaler.
-4. Configure Ingress for domain routing.
-5. Validate with curl or browser.
+#### Lab Tasks:
+- Package a Node.js app into a Docker image.
+- Deploy it on Kubernetes using Deployment, Service, ConfigMap, Secret.
+- Add Horizontal Pod Autoscaler.
+- Configure Ingress for domain routing.
+- Validate with curl or browser.
 
 ---
 
 ## Day 31 – Jenkins and CI/CD Fundamentals
-
+#### Lab Tasks:
 - Learn about Continuous Integration and Continuous Delivery.
 - Understand Jenkins architecture.
 - Install Jenkins locally using Docker.
@@ -573,17 +547,17 @@ multi-app/
 ---
 
 ## Day 32 – Installing Jenkins on AWS EC2
-
-1. Launch Ubuntu EC2 instance.
-2. Install Java and Jenkins.
-3. Open port 8080 in security groups.
-4. Access Jenkins dashboard in browser.
-5. Configure admin user and basic plugins.
+#### Lab Tasks:
+- Launch Ubuntu EC2 instance.
+- Install Java and Jenkins.
+- Open port 8080 in security groups.
+- Access Jenkins dashboard in browser.
+- Configure admin user and basic plugins.
 
 ---
 
 ## Day 33 – Jenkins + GitHub Integration
-
+#### Lab Tasks:
 - Connect Jenkins with GitHub using webhooks.
 - Create a Jenkins job triggered by GitHub push.
 - Clone and build code automatically.
@@ -592,17 +566,17 @@ multi-app/
 ---
 
 ## Day 34 – CI/CD for Dockerized Apps
-
-1. Create Dockerfile for a sample app.
-2. Write Jenkins pipeline to build Docker image.
-3. Push image to Docker Hub.
-4. Deploy container on server.
-5. Automate the entire pipeline.
+#### Lab Tasks:
+- Create Dockerfile for a sample app.
+- Write Jenkins pipeline to build Docker image.
+- Push image to Docker Hub.
+- Deploy container on server.
+- Automate the entire pipeline.
 
 ---
 
 ## Day 35 – Jenkinsfile and Declarative Pipelines
-
+#### Lab Tasks:
 - Learn Jenkins Declarative Pipeline syntax.
 - Write a Jenkinsfile and commit to GitHub repo.
 - Automate pipeline with stages (Build, Test, Deploy).
@@ -611,16 +585,16 @@ multi-app/
 ---
 
 ## Day 36 – GitHub Actions Introduction
-
-1. Learn GitHub Actions workflow syntax.
-2. Create `.github/workflows/ci.yml`.
-3. Add job to run tests on push.
-4. Observe workflow runs in GitHub UI.
+#### Lab Tasks:
+- Learn GitHub Actions workflow syntax.
+- Create `.github/workflows/ci.yml`.
+- Add job to run tests on push.
+- Observe workflow runs in GitHub UI.
 
 ---
 
 ## Day 37 – Building Workflows with GitHub Actions
-
+#### Lab Tasks:
 - Add multiple jobs in workflow.
 - Implement job dependencies.
 - Use matrix builds for different Node.js versions.
@@ -629,17 +603,17 @@ multi-app/
 ---
 
 ## Day 38 – Advanced GitHub Actions with Secrets and Artifacts
-
-1. Store secrets in GitHub repo.
-2. Use secrets in workflows securely.
-3. Upload build artifacts.
-4. Download artifacts in another job.
-5. Implement approval step.
+#### Lab Tasks:
+- Store secrets in GitHub repo.
+- Use secrets in workflows securely.
+- Upload build artifacts.
+- Download artifacts in another job.
+- Implement approval step.
 
 ---
 
 ## Day 39 – Introduction to Terraform and IaC
-
+#### Lab Tasks:
 - What is Infrastructure as Code?
 - Install Terraform CLI.
 - Write a Terraform config to provision EC2.
@@ -649,16 +623,16 @@ multi-app/
 ---
 
 ## Day 40 – Writing Terraform for AWS (EC2, S3, IAM)
-
-1. Create EC2 instance with Terraform.
-2. Create S3 bucket with versioning.
-3. Create IAM user with policy.
-4. Use variables and outputs.
+#### Lab Tasks:
+- Create EC2 instance with Terraform.
+- Create S3 bucket with versioning.
+- Create IAM user with policy.
+- Use variables and outputs.
 
 ---
 
 ## Day 41 – Terraform State Management and Workspaces
-
+#### Lab Tasks:
 - Understand Terraform state file.
 - Use `terraform state list`, `show`.
 - Create remote backend with S3 + DynamoDB.
@@ -667,16 +641,16 @@ multi-app/
 ---
 
 ## Day 42 – Advanced Terraform Concepts (Modules, Remote Backends)
-
-1. Write reusable Terraform module.
-2. Publish module locally.
-3. Use remote backend (S3/DynamoDB).
-4. Configure remote module source.
+#### Lab Tasks:
+- Write reusable Terraform module.
+- Publish module locally.
+- Use remote backend (S3/DynamoDB).
+- Configure remote module source.
 
 ---
 
 ## Day 43 – Terraform + Jenkins CI/CD Integration
-
+#### Lab Tasks:
 - Write Jenkins pipeline for Terraform.
 - Lint and validate Terraform configs.
 - Plan and apply infrastructure changes.
@@ -685,16 +659,16 @@ multi-app/
 ---
 
 ## Day 44 – AWS CloudFormation Basics and YAML Templates
-
-1. Write a basic CloudFormation template in YAML.
-2. Deploy stack via AWS Console.
-3. Create EC2 + Security Group.
-4. Validate template using `cfn-lint`.
+#### Lab Tasks:
+- Write a basic CloudFormation template in YAML.
+- Deploy stack via AWS Console.
+- Create EC2 + Security Group.
+- Validate template using `cfn-lint`.
 
 ---
 
 ## Day 45 – Writing Reusable CloudFormation Templates
-
+#### Lab Tasks:
 - Use parameters and mappings.
 - Add conditions and outputs.
 - Create nested stacks.
@@ -703,13 +677,244 @@ multi-app/
 ---
 
 ## Day 46 – Automated Infrastructure Provisioning Pipeline
-
-1. Combine Terraform and CloudFormation.
-2. Build Jenkins pipeline to deploy infra.
-3. Test infra provisioning automatically.
-4. Implement rollback on failure.
-
-
+#### Lab Tasks:
+- Combine Terraform and CloudFormation.
+- Build Jenkins pipeline to deploy infra.
+- Test infra provisioning automatically.
+- Implement rollback on failure.
+---
+## Day 47 – Introduction to Ansible and Configuration Management
+#### Lab Tasks:
+- Install Ansible on Control Node.
+- Setup Passwordless SSH to managed nodes.
+- Run Ad-Hoc commands (ping, uptime).
+---
+## Day 48 – Writing Playbooks and Ansible Roles
+#### Lab Tasks:
+- Write first YAML Playbook.
+- Refactor Playbook into Role structure.
+- Use Ansible Galaxy to init roles.
+---
+## Day 49 – Ansible + Jenkins Integration
+#### Lab Tasks:
+- Install Ansible plugin in Jenkins.
+- Trigger Playbook execution from Jenkins Job.
+- Automate configuration updates.
+---
+## Day 50 – Ansible Best Practices
+#### Lab Tasks:
+- Use Ansible Vault to encrypt secrets.
+- Optimize Playbook execution speed.
+---
+## Day 51 – Serverless Architecture
+#### Lab Tasks:
+- Create Hello World Lambda Function.
+- Test Function execution in Console.
+---
+## Day 52 – Writing Lambda Functions
+#### Lab Tasks:
+- Create Lambda with S3 Trigger.
+- Process file uploads automatically.
+---
+## Day 53 – CICD for Serverless
+#### Lab Tasks:
+- Deploy Lambda using Serverless Framework/SAM.
+- Automate deployment with CodePipeline.
+---
+## Day 54 – Monitoring Serverless
+#### Lab Tasks:
+- View Lambda CloudWatch Logs.
+- Debug execution errors.
+---
+## Day 55 – Logging with CloudWatch for Lambda
+#### Lab Tasks:
+- Set up CloudWatch Logs for Lambda functions.
+- Create Log Groups and Retention policies.
+---
+## Day 56 – Real-World Serverless Automation Example
+#### Lab Tasks:
+- deploy a serverless user creation script.
+- Automate IAM permission management.
+---
+## Day 57 – AWS API Gateway Deep Dive
+#### Lab Tasks:
+- Create REST API with API Gateway.
+- Integrate API Gateway with Lambda backend.
+- Set up API Keys and Usage Plans.
+---
+## Day 58 – Automating Backups and Notifications
+#### Lab Tasks:
+- Automate EBS Snapshots using Lambda + CloudWatch Events.
+- Send SNS notifications on backup completion.
+---
+## Day 59 – Advanced Monitoring and Logging Pipelines
+#### Lab Tasks:
+- Build a centralized logging pipeline (CloudWatch -> Kinesis -> OpenSearch).
+- Analyze logs in real-time.
+---
+## Day 60 – Observability with OpenTelemetry
+#### Lab Tasks:
+- Instrument an application with OpenTelemetry auto-instrumentation.
+- Export traces to a backend (Jaeger or X-Ray).
+---
+## Day 61 – APM with Datadog and AWS Integrations
+#### Lab Tasks:
+- Integrate Datadog with AWS account.
+- Monitor EC2 and Lambda metrics in Datadog Dashboard.
+---
+## Day 62 – Security IAM Best Practices
+#### Lab Tasks:
+- Audit IAM roles using Access Analyzer.
+- Implement MFA enforcement policies.
+---
+## Day 63 – AWS Secrets Manager and Parameter Store
+#### Lab Tasks:
+- Store database credentials in Secrets Manager.
+- Retrieve secrets programmatically in Python/Node.js.
+---
+## Day 64 – Network Security (WAF, Shield, NACLs)
+#### Lab Tasks:
+- Configure AWS WAF to block SQL injection and XSS.
+- Understand AWS Shield for DDoS protection.
+- Implement NACLs to block specific IPs at the subnet level.
+---
+## Day 65 – Compliance Tools (AWS Config, Security Hub, Trusted Advisor)
+#### Lab Tasks:
+- Set up AWS Config to audit resource configurations (e.g., S3 public access).
+- Enable Security Hub and check CIS Benchmark score.
+- Review Trusted Advisor for cost and security recommendations.
+---
+## Day 66 – Cost Optimization Strategies
+#### Lab Tasks:
+- implementation of Savings Plans and Reserved Instances.
+- Analyze Cost and Usage Reports (CUR).
+---
+## Day 67 – Monitoring Cost with AWS Budgets
+#### Lab Tasks:
+- Set up AWS Budgets for monthly spend.
+- Configure alerting for forecasted overruns.
+---
+## Day 68 – Tagging and Resource Management
+#### Lab Tasks:
+- Implement a consistent Tagging Policy.
+- Use Resource Groups to manage tagged resources.
+---
+## Day 69 – Disaster Recovery and High Availability
+#### Lab Tasks:
+- Design a Multi-Region DR strategy (Pilot Light vs Warm Standby).
+- Test Route53 Failover routing.
+---
+## Day 70 – Backup and Snapshot Automation
+#### Lab Tasks:
+- Configure AWS Backup policies for EC2 and RDS.
+- Automate cross-region snapshot copies.
+---
+## Day 71 – Multi-Cloud Deployments (AWS + Azure)
+#### Lab Tasks:
+- Provision resources on AWS and Azure using Terraform.
+- Manage multiple providers in main.tf.
+---
+## Day 72 – EKS Cluster Setup with Terraform
+#### Lab Tasks:
+- Create EKS Cluster using Terraform (or eksctl).
+- Verify kubectl connectivity and node groups.
+---
+## Day 73 – Jenkins Pipelines for Kubernetes
+#### Lab Tasks:
+- Write Jenkinsfile for Push-based CD.
+- Build Docker image and update K8s deployment.
+---
+## Day 74 – Serverless ETL Pipeline
+#### Lab Tasks:
+- Create Lambda function triggered by S3 upload.
+- Process CSV data and insert into DynamoDB.
+---
+## Day 75 – Logging and Monitoring for Production Apps
+#### Lab Tasks:
+- Install CloudWatch Agent.
+- Monitor Custom Metrics (Memory, Disk Space).
+---
+## Day 76 – Real-Time Dashboards with Grafana + Loki
+#### Lab Tasks:
+- Deploy PLG Stack (Promtail, Loki, Grafana).
+- Visualize logs in Grafana.
+---
+## Day 77 – Automating EC2/Container Backups
+#### Lab Tasks:
+- Install Velero for Kubernetes backups.
+- Backup and Restore a namespace.
+---
+## Day 78 – GitOps with ArgoCD and FluxCD
+#### Lab Tasks:
+- Install ArgoCD on K8s.
+- Connect to Git repo and sync applications.
+---
+## Day 79 – CICD for Microservices
+#### Lab Tasks:
+- Strategies for Monorepo vs Polyrepo.
+- Build independent pipelines for services.
+- Smart Change Detection.
+---
+## Day 80 – AWS CodePipeline + CodeDeploy
+#### Lab Tasks:
+- Create buildspec.yml and appspec.yml.
+- Native AWS CI/CD pipeline creation.
+---
+## Day 81 – X-Ray for Tracing Microservices
+#### Lab Tasks:
+- Instrument application with X-Ray SDK.
+- Visualize service map and latency.
+---
+## Day 82 – Handling Multi-Environment Deployments
+#### Lab Tasks:
+- Manage Dev, Staging, Prod configs.
+- Parameterize build specs.
+---
+## Day 83 – End-to-End Infrastructure Automation
+#### Lab Tasks:
+- Terraform + UserData for full stack provisioning.
+- Bootstrap application from scratch.
+---
+## Day 84 – Building a DevSecOps Pipeline
+#### Lab Tasks:
+- Integrate Trivy image scanner in Jenkins.
+- Fail builds on security vulnerabilities.
+---
+## Day 85 – High Availability Setup on AWS
+#### Lab Tasks:
+- Configure Auto Scaling Groups (ASG) and Application Load Balancer (ALB).
+- Test failover across Availability Zones.
+---
+## Day 86 – Real-Time Alerts and Notifications
+#### Lab Tasks:
+- Configure SNS and Lambda for Slack notifications.
+- Alert on specific keywords.
+---
+## Day 87 – Debugging and Troubleshooting Production Systems
+#### Lab Tasks:
+- Debugging Crashing Pods (CrashLoopBackOff).
+- Root Cause Analysis methodologies.
+---
+## Day 88 – Final Real-World Deployment Project
+#### Lab Tasks:
+- **Full Stack Deployment**: Node.js App + MongoDB.
+- **Tools**: EKS, Jenkins, ArgoCD, Terraform, Prometheus.
+- The ultimate test of your 90-day journey.
+---
+## Day 89 – Portfolio and Resume Building
+#### Lab Tasks:
+- Build a GitHub Portfolio Page.
+- Document projects with README.md.
+- Mock Interview preparation.
+---
+## Day 90 – Career Roadmap and Final Review
+#### Lab Tasks:
+- Certification Path (Solutions Architect / DevOps Professional).
+- Continuous Learning roadmap.
+- Final course wrap-up.
+---
 
 🎯 Action for Everyone:
 Post your learnings in our LinkedIn group, tag me, and share any screenshots or key takeaways. Let’s build a visible DevOps learning community!
+
+---
