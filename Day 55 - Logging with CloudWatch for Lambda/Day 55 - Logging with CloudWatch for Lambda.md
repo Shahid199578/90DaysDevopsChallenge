@@ -3,9 +3,10 @@
 Welcome to **Day 55** of the DevOps 90-Day Challenge!
 Today, we focus on **logging** in serverless applications using **AWS CloudWatch**. Logs are essential to debug, troubleshoot, and analyze the behavior of your Lambda functions and serverless workflows.
 
-[![](https://img.youtube.com/vi/placeholder/0.jpg)](https://www.youtube.com)
+[![](https://img.youtube.com/vi/cnw4UgiRM2w/0.jpg)](https://www.youtube.com/watch?v=cnw4UgiRM2w)
 
-[Watch the video (Link Pending)]()
+
+[Watch the video](https://www.youtube.com/watch?v=cnw4UgiRM2w)
 
 ---
 

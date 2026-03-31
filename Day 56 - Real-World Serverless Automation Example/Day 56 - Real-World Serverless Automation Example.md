@@ -3,9 +3,12 @@
 Welcome to **Day 56** of the DevOps 90-Day Challenge!
 Today, we bring everything together by exploring a **real-world serverless automation project**. We will build a pipeline that processes files automatically when uploaded to S3.
 
-[![](https://img.youtube.com/vi/placeholder/0.jpg)](https://www.youtube.com)
 
-[Watch the video (Link Pending)]()
+[![](https://img.youtube.com/vi/l8I6n4acAi8/0.jpg)](https://www.youtube.com/watch?v=l8I6n4acAi8)
+
+
+[Watch the video](https://www.youtube.com/watch?v=l8I6n4acAi8)
+
 
 ---
 
