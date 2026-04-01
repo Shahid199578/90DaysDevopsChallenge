@@ -3,10 +3,10 @@
 Welcome to **Day 57** of the DevOps 90-Day Challenge!
 Today, we dive deep into **Amazon API Gateway**, the front door for your serverless applications. It allows you to create robust REST and HTTP APIs that expose your Lambda functions to the world.
 
-[![](https://img.youtube.com/vi/placeholder/0.jpg)](https://www.youtube.com)
+[![](https://img.youtube.com/vi/R_qvD5rjKj8/0.jpg)](https://www.youtube.com/watch?v=R_qvD5rjKj8)
 
-[Watch the video (Link Pending)]()
 
+[Watch the video](https://www.youtube.com/watch?v=R_qvD5rjKj8)
 ---
 
 ## Objective
