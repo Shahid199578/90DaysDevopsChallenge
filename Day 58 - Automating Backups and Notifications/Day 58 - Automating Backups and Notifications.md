@@ -3,9 +3,10 @@
 Welcome to **Day 58** of the DevOps 90-Day Challenge!
 Data is the most valuable asset in any organization. Today, we learn how to **automate backups** and set up notifications to ensure you never lose data and are always informed of system health.
 
-[![](https://img.youtube.com/vi/placeholder/0.jpg)](https://www.youtube.com)
+[![](https://img.youtube.com/vi/J3u5KsIrmx4/0.jpg)](https://www.youtube.com/watch?v=J3u5KsIrmx4)
 
-[Watch the video (Link Pending)]()
+
+[Watch the video](https://www.youtube.com/watch?v=J3u5KsIrmx4)  
 
 ---
 
