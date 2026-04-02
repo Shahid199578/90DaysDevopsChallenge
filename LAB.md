@@ -804,10 +804,11 @@ multi-app/
 - Design a Multi-Region DR strategy (Pilot Light vs Warm Standby).
 - Test Route53 Failover routing.
 ---
-## Day 70 – Backup and Snapshot Automation
+## Day 70 – AWS Systems Manager and Patch Management
 #### Lab Tasks:
-- Configure AWS Backup policies for EC2 and RDS.
-- Automate cross-region snapshot copies.
+- Connect to EC2 using Session Manager.
+- Execute fleet-wide commands securely.
+- Automate patching with Patch Manager.
 ---
 ## Day 71 – Multi-Cloud Deployments (AWS + Azure)
 #### Lab Tasks:
@@ -824,10 +825,11 @@ multi-app/
 - Write Jenkinsfile for Push-based CD.
 - Build Docker image and update K8s deployment.
 ---
-## Day 74 – Serverless ETL Pipeline
+## Day 74 – Kubernetes Service Mesh with Istio
 #### Lab Tasks:
-- Create Lambda function triggered by S3 upload.
-- Process CSV data and insert into DynamoDB.
+- Install Istio and enable sidecar injection.
+- Deploy an application and configure mTLS.
+- Perform Traffic Splitting for Canary tests.
 ---
 ## Day 75 – Logging and Monitoring for Production Apps
 #### Lab Tasks:
@@ -839,10 +841,11 @@ multi-app/
 - Deploy PLG Stack (Promtail, Loki, Grafana).
 - Visualize logs in Grafana.
 ---
-## Day 77 – Automating EC2/Container Backups
+## Day 77 – Kubernetes Autoscaling
 #### Lab Tasks:
-- Install Velero for Kubernetes backups.
-- Backup and Restore a namespace.
+- Install Metrics Server and set resource limits.
+- Deploy an HPA to auto-scale pods (CPU > 50%).
+- Setup Karpenter to auto-provision Nodes.
 ---
 ## Day 78 – GitOps with ArgoCD and FluxCD
 #### Lab Tasks:
@@ -885,10 +888,11 @@ multi-app/
 - Configure Auto Scaling Groups (ASG) and Application Load Balancer (ALB).
 - Test failover across Availability Zones.
 ---
-## Day 86 – Real-Time Alerts and Notifications
+## Day 86 – Chaos Engineering and Resilience Testing
 #### Lab Tasks:
-- Configure SNS and Lambda for Slack notifications.
-- Alert on specific keywords.
+- Install Chaos Mesh into Kubernetes.
+- Create a PodChaos experiment to simulate failure.
+- Verify Kubernetes Auto-Healing responds correctly.
 ---
 ## Day 87 – Debugging and Troubleshooting Production Systems
 #### Lab Tasks:
